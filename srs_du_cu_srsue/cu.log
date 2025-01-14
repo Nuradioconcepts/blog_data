@@ -1,0 +1,3002 @@
+2025-01-09T19:05:58.278088 [CU      ] [I] Built in Release mode using commit e5d5b44b9 on branch main
+2025-01-09T19:05:58.279184 [CONFIG  ] [D] Input configuration (all values): 
+log:
+  metrics_level: info
+  hex_max_size: 0
+  filename: /tmp/cu.log
+  lib_level: debug
+  e2ap_level: debug
+  config_level: debug
+  pdcp_level: debug
+  rrc_level: debug
+  ngap_level: debug
+  f1ap_level: debug
+  cu_level: debug
+  sec_level: debug
+  f1ap_json_enabled: false
+  sdap_level: debug
+  gtpu_level: debug
+  f1u_level: debug
+buffer_pool:
+  nof_segments: 1048576
+  segment_size: 2048
+cu_cp:
+  max_nof_dus: 6
+  max_nof_cu_ups: 6
+  max_nof_ues: 8192
+  max_nof_drbs_per_ue: 8
+  inactivity_timer: 120
+  request_pdu_session_timeout: 3
+  amf:
+    no_core: false
+    amf:
+      addr: 127.0.0.5
+      port: 38412
+      bind_addr: 127.0.0.87
+      bind_interface: auto
+      sctp_rto_initial: 120
+      sctp_rto_min: 120
+      sctp_rto_max: 500
+      sctp_init_max_attempts: 3
+      sctp_max_init_timeo: 500
+      sctp_nodelay: false
+      supported_tracking_areas:
+        - tac: 77
+          plmn_list:
+            - plmn: 00101
+              tai_slice_support_list:
+                - sst: "\x01"
+                  sd: 16777215
+  mobility:
+    trigger_handover_from_measurements: false
+  rrc:
+    force_reestablishment_fallback: false
+    rrc_procedure_timeout_ms: 720
+  security:
+    integrity: not_needed
+    confidentiality: required
+    nea_pref_list: nea0,nea2,nea1,nea3
+    nia_pref_list: nia2,nia1,nia3
+  f1ap:
+    procedure_timeout: 1000
+cu_up:
+  gtpu_queue_size: 2048
+  warn_on_drop: false
+gnb_id: 411
+gnb_id_bit_length: 22
+ran_node_name: cu_cp_01
+pcap:
+  ngap_filename: /tmp/cu_ngap.pcap
+  ngap_enable: true
+  f1ap_filename: /tmp/gnb_f1ap.pcap
+  f1ap_enable: true
+  e1ap_filename: /tmp/cu_e1ap.pcap
+  e1ap_enable: false
+  e2ap_cu_cp_filename: /tmp/cu_cp_e2ap.pcap
+  e2ap_cu_cp_enable: false
+  n3_filename: /tmp/cu_n3.pcap
+  n3_enable: false
+  f1u_filename: /tmp/cu_f1u.pcap
+  f1u_enable: false
+  e2ap_cu_up_filename: /tmp/cu_up_e2ap.pcap
+  e2ap_enable: false
+metrics:
+  cu_cp_statistics_report_period: 1
+  cu_up_statistics_report_period: 1
+  pdcp_report_period: 0
+slicing:
+  - sst: "\x01"
+e2:
+  enable_cu_cp_e2: false
+  addr: 127.0.0.1
+  port: 36421
+  bind_addr: 127.0.0.1
+  sctp_rto_initial: 120
+  sctp_rto_min: 120
+  sctp_rto_max: 500
+  sctp_init_max_attempts: 3
+  sctp_max_init_timeo: 500
+  e2sm_kpm_enabled: false
+  e2sm_rc_enabled: false
+  enable_cu_up_e2: false
+upf:
+  bind_addr: 127.0.0.87
+  bind_interface: auto
+  ext_addr: auto
+  udp_max_rx_msgs: 256
+  no_core: false
+2025-01-09T19:05:59.277295 [CU      ] [D] Required CPU features: sse4.1(ok) avx(ok) avx2(ok) fma(ok) pclmul(ok)
+2025-01-09T19:05:59.277367 [CU      ] [W] CPU0 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277384 [CU      ] [W] CPU1 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277397 [CU      ] [W] CPU2 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277409 [CU      ] [W] CPU3 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277422 [CU      ] [W] CPU4 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277435 [CU      ] [W] CPU5 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277447 [CU      ] [W] CPU6 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277460 [CU      ] [W] CPU7 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277471 [CU      ] [W] CPU8 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277483 [CU      ] [W] CPU9 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277496 [CU      ] [W] CPU10 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277508 [CU      ] [W] CPU11 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277519 [CU      ] [W] CPU12 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277531 [CU      ] [W] CPU13 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277542 [CU      ] [W] CPU14 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277555 [CU      ] [W] CPU15 scaling governor is not set to performance, which may hinder performance. You can set it to performance using the "srsran_performance" script
+2025-01-09T19:05:59.277566 [CU      ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "srsran_performance" script
+2025-01-09T19:05:59.286407 [ALL     ] [D] Opened file /tmp/cu_ngap.pcap for writing. DLT=152
+2025-01-09T19:05:59.286434 [ALL     ] [D] Opened file /tmp/gnb_f1ap.pcap for writing. DLT=154
+2025-01-09T19:05:59.286536 [IO-EPOLL] [D] io_broker thread started...
+2025-01-09T19:05:59.286592 [SCTP-GW ] [D] F1-C: SCTP socket created with fd=8
+2025-01-09T19:05:59.286593 [SCTP-GW ] [D] Setting socket options. params=[if_name=F1-C ai_family=2 ai_socktype=5 reuse_addr=false non_blockin_mode=false rx_timeout=1 rto_initial={na} rto_min={na} rto_max={na} init_max_attempts={na} max_init_timeo={na} no_delay={na}]
+2025-01-09T19:05:59.286605 [SCTP-GW ] [D] F1-C: Binding to 127.0.0.88:38472...
+2025-01-09T19:05:59.286614 [SCTP-GW ] [I] F1-C: Bind to 127.0.0.88:38472 was successful
+2025-01-09T19:05:59.286623 [GTPU    ] [I] GTP-U demux. warn_on_drop=true test_mode=false
+2025-01-09T19:05:59.286626 [UDP-GW  ] [I] UDP GW configured. rx_max_mmsg=256 pool_thres=0.9
+2025-01-09T19:05:59.287629 [UDP-GW  ] [D] Binding to 127.0.0.88 port 2152
+2025-01-09T19:05:59.287633 [UDP-GW  ] [D] Binding successful
+2025-01-09T19:05:59.287701 [IO-EPOLL] [I] fd=9: Registered file descriptor successfully
+2025-01-09T19:05:59.288323 [IO-EPOLL] [I] fd=10: Registered file descriptor successfully
+2025-01-09T19:05:59.288364 [SCTP-GW ] [D] E2AP: SCTP socket created with fd=11
+2025-01-09T19:05:59.288366 [SCTP-GW ] [D] Setting socket options. params=[if_name=E2AP ai_family=2 ai_socktype=5 reuse_addr=false non_blockin_mode=false rx_timeout=1 rto_initial={na} rto_min={na} rto_max={na} init_max_attempts={na} max_init_timeo={na} no_delay={na}]
+2025-01-09T19:05:59.288379 [SCTP-GW ] [D] E2AP: Binding to 127.0.0.1:0...
+2025-01-09T19:05:59.288385 [SCTP-GW ] [I] E2AP: Bind to 127.0.0.1:0 was successful
+2025-01-09T19:05:59.288397 [SCTP-GW ] [D] E2AP: SCTP socket created with fd=12
+2025-01-09T19:05:59.288397 [SCTP-GW ] [D] Setting socket options. params=[if_name=E2AP ai_family=2 ai_socktype=5 reuse_addr=false non_blockin_mode=false rx_timeout=1 rto_initial={na} rto_min={na} rto_max={na} init_max_attempts={na} max_init_timeo={na} no_delay={na}]
+2025-01-09T19:05:59.288399 [SCTP-GW ] [D] E2AP: Binding to 127.0.0.1:0...
+2025-01-09T19:05:59.288401 [SCTP-GW ] [I] E2AP: Bind to 127.0.0.1:0 was successful
+2025-01-09T19:05:59.288455 [SCTP-GW ] [D] N2: SCTP socket created with fd=13
+2025-01-09T19:05:59.288455 [SCTP-GW ] [D] Setting socket options. params=[if_name=N2 ai_family=2 ai_socktype=5 reuse_addr=false non_blockin_mode=false rx_timeout=1 rto_initial=120 rto_min=120 rto_max=500 init_max_attempts=3 max_init_timeo=500 no_delay={na}]
+2025-01-09T19:05:59.288458 [SCTP-GW ] [D] N2: Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 120, Minimum RTO 120, Maximum RTO 500
+2025-01-09T19:05:59.288462 [SCTP-GW ] [D] N2: Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 500
+2025-01-09T19:05:59.288464 [SCTP-GW ] [D] N2: Binding to 127.0.0.87:0...
+2025-01-09T19:05:59.288467 [SCTP-GW ] [I] N2: Bind to 127.0.0.87:0 was successful
+2025-01-09T19:05:59.290959 [IO-EPOLL] [I] fd=0: Registered file descriptor successfully
+2025-01-09T19:05:59.290961 [CU      ] [I] Starting CU-CP...
+2025-01-09T19:05:59.291075 [CU-CP   ] [D] Establishing TNL connection to AMF (127.0.0.5:38412)...
+2025-01-09T19:05:59.291086 [SCTP-GW ] [D] N2: Connecting to 127.0.0.5:38412...
+2025-01-09T19:05:59.291248 [IO-EPOLL] [I] fd=13: Registered file descriptor successfully
+2025-01-09T19:05:59.291250 [SCTP-GW ] [I] N2: SCTP connection to AMF on 127.0.0.5:38412 was established
+2025-01-09T19:05:59.291255 [CU-CP   ] [I] N2: Connection to AMF on 127.0.0.5:38412 was established
+2025-01-09T19:05:59.291257 [SCTP-GW ] [D] N2: Rx SCTP_ASSOC_CHANGE: state=SCTP_COMM_UP error=0 outbound_streams=10 inbound_streams=30 assoc=323318
+2025-01-09T19:05:59.291354 [NGAP    ] [D] "NG Setup Procedure" started...
+2025-01-09T19:05:59.291371 [NGAP    ] [I] Tx PDU: NGSetupRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 21,
+    "criticality": "reject",
+    "value": {
+      "NGSetupRequest": {
+        "protocolIEs": {
+          "id": 27,
+          "criticality": "reject",
+          {
+            "globalGNB-ID": {
+              "pLMNIdentity": "00f110",
+              "gNB-ID": {
+                "gNB-ID": "0000000000000110011011"
+              }
+            }
+          },
+          "id": 82,
+          "criticality": "ignore",
+          "Value": "cu_cp_01",
+          "id": 102,
+          "criticality": "reject",
+          "Value": [
+            {
+              "tAC": "00004d",
+              "broadcastPLMNList": [
+                {
+                  "pLMNIdentity": "00f110",
+                  "tAISliceSupportList": [
+                    {
+                      "s-NSSAI": {
+                        "sST": "01"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "id": 21,
+          "criticality": "ignore",
+          "Value": "v256"
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:05:59.291444 [SCTP-GW ] [D] N2: Sending PDU of 55 bytes
+2025-01-09T19:05:59.298182 [SCTP-GW ] [D] N2: Received 54 bytes
+2025-01-09T19:05:59.298276 [NGAP    ] [I] Rx PDU: NGSetupResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 21,
+    "criticality": "reject",
+    "value": {
+      "NGSetupResponse": {
+        "protocolIEs": {
+          "id": 1,
+          "criticality": "reject",
+          "Value": "open5gs-amf0",
+          "id": 96,
+          "criticality": "reject",
+          "Value": [
+            {
+              "gUAMI": {
+                "pLMNIdentity": "00f110",
+                "aMFRegionID": "00000010",
+                "aMFSetID": "0000000001",
+                "aMFPointer": "000000"
+              }
+            }
+          ],
+          "id": 86,
+          "criticality": "ignore",
+          "Value": 255,
+          "id": 80,
+          "criticality": "reject",
+          "Value": [
+            {
+              "pLMNIdentity": "00f110",
+              "sliceSupportList": [
+                {
+                  "s-NSSAI": {
+                    "sST": "01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:05:59.298293 [NGAP    ] [D] "NG Setup Procedure" finished successfully
+2025-01-09T19:05:59.298320 [CU-CP   ] [I] Connected to AMF. Supported PLMNs: 00101 
+2025-01-09T19:05:59.298344 [CU      ] [I] CU-CP started successfully
+2025-01-09T19:05:59.298372 [SCTP-GW ] [I] F1-C: Listening for new SCTP connections on port 38472...
+2025-01-09T19:05:59.298404 [IO-EPOLL] [I] fd=8: Registered file descriptor successfully
+2025-01-09T19:05:59.298427 [UDP-GW  ] [D] Read bind port of UDP network gateway: 127.0.0.88
+2025-01-09T19:05:59.298441 [GTPU    ] [I] GTP-U demux. warn_on_drop=false test_mode=false
+2025-01-09T19:05:59.298476 [GTPU    ] [I] Tunnel added. teid=0x000000
+2025-01-09T19:05:59.298480 [UDP-GW  ] [I] UDP GW configured. rx_max_mmsg=256 pool_thres=0.9
+2025-01-09T19:05:59.299977 [UDP-GW  ] [D] Binding to 127.0.0.87 port 2152
+2025-01-09T19:05:59.299985 [UDP-GW  ] [D] Binding successful
+2025-01-09T19:05:59.300019 [IO-EPOLL] [I] fd=14: Registered file descriptor successfully
+2025-01-09T19:05:59.304540 [CU-UP   ] [I] CU-UP starting...
+2025-01-09T19:05:59.304579 [CU-UP   ] [D] cu-up=0: "Initial CU-UP setup routine" initialized.
+2025-01-09T19:05:59.304602 [CU-CP   ] [I] Added TNL connection to CU-UP 0
+2025-01-09T19:05:59.304616 [CU-UP-E1] [D] "E1AP CU-UP Setup Procedure" initialized
+2025-01-09T19:05:59.304653 [CU-UP-E1] [I] Sending E1SetupRequest
+2025-01-09T19:05:59.304657 [CU-UP-E1] [I] Tx PDU tid=0: GNB-CU-UP-E1SetupRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 3,
+    "criticality": "reject",
+    "value": {
+      "GNB-CU-UP-E1SetupRequest": {
+        "protocolIEs": {
+          "id": 57,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 7,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 8,
+          "criticality": "ignore",
+          "Value": "srs_cu_up_01",
+          "id": 10,
+          "criticality": "reject",
+          "Value": "c-5gc",
+          "id": 11,
+          "criticality": "reject",
+          "Value": [
+            {
+              "pLMN-Identity": "00f110"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:05:59.304662 [CU-CP-E1] [I] Rx PDU tid=0: GNB-CU-UP-E1SetupRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 3,
+    "criticality": "reject",
+    "value": {
+      "GNB-CU-UP-E1SetupRequest": {
+        "protocolIEs": {
+          "id": 57,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 7,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 8,
+          "criticality": "ignore",
+          "Value": "srs_cu_up_01",
+          "id": 10,
+          "criticality": "reject",
+          "Value": "c-5gc",
+          "id": 11,
+          "criticality": "reject",
+          "Value": [
+            {
+              "pLMN-Identity": "00f110"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:05:59.304669 [CU-CP-E1] [I] Tx PDU tid=0: GNB-CU-UP-E1SetupResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 3,
+    "criticality": "reject",
+    "value": {
+      "GNB-CU-UP-E1SetupResponse": {
+        "protocolIEs": {
+          "id": 57,
+          "criticality": "reject",
+          "Value": 0
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:05:59.304675 [CU-UP-E1] [I] Rx PDU tid=0: GNB-CU-UP-E1SetupResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 3,
+    "criticality": "reject",
+    "value": {
+      "GNB-CU-UP-E1SetupResponse": {
+        "protocolIEs": {
+          "id": 57,
+          "criticality": "reject",
+          "Value": 0
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:05:59.304677 [CU-UP-E1] [I] "E1AP CU-UP Setup Procedure" finalized
+2025-01-09T19:05:59.304679 [CU-UP   ] [D] cu-up=0: "Initial CU-UP setup routine" finalized.
+2025-01-09T19:05:59.304756 [CU-UP   ] [I] CU-UP started successfully
+2025-01-09T19:06:00.290336 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:00.304342 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:01.290352 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:01.304334 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:02.290350 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:02.304338 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:03.290352 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:03.304335 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:04.290342 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:04.304350 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:04.848021 [SCTP-GW ] [D] F1-C: Rx SCTP_ASSOC_CHANGE: state=SCTP_COMM_UP error=0 outbound_streams=10 inbound_streams=10 assoc=323321
+2025-01-09T19:06:04.848039 [SCTP-GW ] [I] F1-C assoc=323321: New client SCTP association (client_addr=127.0.0.87:54800)
+2025-01-09T19:06:04.848122 [RRC     ] [D] 5QI DRB config: 5QI=0x1 rb_type=DRB rlc_mode=UM int_req=false cip_req=true TX=[sn_size=12 discard_timer=infinity] RX=[sn_size=12 t_reordering=80 out_of_order=false] custom_tx=[count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false] custom_rx=[count_notify=3221225472 count_max=4294967294]
+2025-01-09T19:06:04.848123 [RRC     ] [D] 5QI DRB config: 5QI=0x2 rb_type=DRB rlc_mode=UM int_req=false cip_req=true TX=[sn_size=12 discard_timer=infinity] RX=[sn_size=12 t_reordering=80 out_of_order=false] custom_tx=[count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false] custom_rx=[count_notify=3221225472 count_max=4294967294]
+2025-01-09T19:06:04.848123 [RRC     ] [D] 5QI DRB config: 5QI=0x5 rb_type=DRB rlc_mode=AM int_req=false cip_req=true TX=[sn_size=12 discard_timer=infinity] RX=[sn_size=12 t_reordering=80 out_of_order=false] custom_tx=[count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false] custom_rx=[count_notify=3221225472 count_max=4294967294]
+2025-01-09T19:06:04.848123 [RRC     ] [D] 5QI DRB config: 5QI=0x7 rb_type=DRB rlc_mode=UM int_req=false cip_req=true TX=[sn_size=18 discard_timer=infinity] RX=[sn_size=18 t_reordering=220 out_of_order=false] custom_tx=[count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false] custom_rx=[count_notify=3221225472 count_max=4294967294]
+2025-01-09T19:06:04.848124 [RRC     ] [D] 5QI DRB config: 5QI=0x9 rb_type=DRB rlc_mode=AM int_req=false cip_req=true TX=[sn_size=18 discard_timer=infinity] RX=[sn_size=18 t_reordering=220 out_of_order=false] custom_tx=[count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false] custom_rx=[count_notify=3221225472 count_max=4294967294]
+2025-01-09T19:06:04.848126 [CU-CP   ] [I] Added TNL connection to DU 0
+2025-01-09T19:06:04.848462 [SCTP-GW ] [D] F1-C assoc=323321: Received 180 bytes
+2025-01-09T19:06:04.848611 [CU-CP-F1] [I] Rx PDU du=0 tid=0: F1SetupRequest
+2025-01-09T19:06:04.848689 [RRC     ] [D] Updating cell=0x66c000 with band=3 ssb_arfcn=368410 ssb_scs=15kHz
+2025-01-09T19:06:04.848690 [CU-CP   ] [D] No configuration to update for nci=0x66c000. Adding configuration
+2025-01-09T19:06:04.848693 [CU-CP   ] [D] Measurement objects:
+2025-01-09T19:06:04.848693 [CU-CP   ] [D]  - ssb_freq=368410: ssb_freq=368410 ssb_scs=15kHz smtc1: periodicity=10 offset=0 dur=5
+2025-01-09T19:06:04.848694 [CU-CP   ] [D] Configured cells:
+2025-01-09T19:06:04.848694 [CU-CP   ] [D]  - nci=0x66c000 complete=yes gnb_id=411 pci=99 band=3 ssb_arfcn=368410 ssb_scs=15kHz ncells=[ ]
+2025-01-09T19:06:04.848707 [CU-CP-F1] [I] Tx PDU du=0 tid=0: F1SetupResponse
+2025-01-09T19:06:04.848725 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 53 bytes
+2025-01-09T19:06:05.290342 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:05.304341 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:06.290412 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:06.304396 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:07.290356 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:07.304337 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:08.290336 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:08.304374 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:09.159523 [SCTP-GW ] [D] F1-C assoc=323321: Received 348 bytes
+2025-01-09T19:06:09.159607 [CU-CP-F1] [I] Rx PDU du=0 tid=1 du_ue=0: InitialULRRCMessageTransfer
+2025-01-09T19:06:09.159673 [CU-UEMNG] [I] ue=0 du_index=0 plmn=00101 gnb_du_id=0 pci=99 rnti=0x4601 pcell_index=0: Created new CU-CP UE
+2025-01-09T19:06:09.160794 [RRC     ] [D] Containerized MasterCellGroup: {
+  "cellGroupId": 0,
+  "rlc-BearerToAddModList": [
+    {
+      "logicalChannelIdentity": 1,
+      "servedRadioBearer": {
+        "srb-Identity": 1
+      },
+      "rlc-Config": {
+        "am": {
+          "ul-AM-RLC": {
+            "sn-FieldLength": "size12",
+            "t-PollRetransmit": "ms45",
+            "pollPDU": "infinity",
+            "pollByte": "infinity",
+            "maxRetxThreshold": "t8"
+          },
+          "dl-AM-RLC": {
+            "sn-FieldLength": "size12",
+            "t-Reassembly": "ms35",
+            "t-StatusProhibit": "ms0"
+          }
+        }
+      },
+      "mac-LogicalChannelConfig": {
+        "ul-SpecificParameters": {
+          "priority": 1,
+          "prioritisedBitRate": "infinity",
+          "bucketSizeDuration": "ms5",
+          "logicalChannelGroup": 0,
+          "schedulingRequestID": 0,
+          "logicalChannelSR-Mask": false,
+          "logicalChannelSR-DelayTimerApplied": false
+        }
+      }
+    }
+  ],
+  "mac-CellGroupConfig": {
+    "schedulingRequestConfig": {
+      "schedulingRequestToAddModList": [
+        {
+          "schedulingRequestId": 0,
+          "sr-TransMax": "n64"
+        }
+      ]
+    },
+    "bsr-Config": {
+      "periodicBSR-Timer": "sf10",
+      "retxBSR-Timer": "sf80"
+    },
+    "tag-Config": {
+      "tag-ToAddModList": [
+        {
+          "tag-Id": 0,
+          "timeAlignmentTimer": "infinity"
+        }
+      ]
+    },
+    "phr-Config": {
+      {
+        "phr-PeriodicTimer": "sf10",
+        "phr-ProhibitTimer": "sf10",
+        "phr-Tx-PowerFactorChange": "dB1",
+        "multiplePHR": false,
+        "dummy": false,
+        "phr-Type2OtherCell": false,
+        "phr-ModeOtherCG": "real"
+      }
+    },
+    "skipUplinkTxDynamic": false
+  },
+  "physicalCellGroupConfig": {
+    "pdsch-HARQ-ACK-Codebook": "dynamic"
+  },
+  "spCellConfig": {
+    "spCellConfigDedicated": {
+      "initialDownlinkBWP": {
+        "pdcch-Config": {
+          {
+            "controlResourceSetToAddModList": [
+              {
+                "controlResourceSetId": 1,
+                "frequencyDomainResources": "111111111111111110000000000000000000000000000",
+                "duration": 1,
+                "cce-REG-MappingType": {
+                },
+                "precoderGranularity": "sameAsREG-bundle"
+              }
+            ],
+            "searchSpacesToAddModList": [
+              {
+                "searchSpaceId": 2,
+                "controlResourceSetId": 1,
+                "monitoringSlotPeriodicityAndOffset": {
+                },
+                "monitoringSymbolsWithinSlot": "10000000000000",
+                "nrofCandidates": {
+                  "aggregationLevel1": "n0",
+                  "aggregationLevel2": "n4",
+                  "aggregationLevel4": "n4",
+                  "aggregationLevel8": "n0",
+                  "aggregationLevel16": "n0"
+                },
+                "searchSpaceType": {
+                  "common": {
+                    "dci-Format0-0-AndFormat1-0": {
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "pdsch-Config": {
+          {
+            "dmrs-DownlinkForPDSCH-MappingTypeA": {
+              {
+              }
+            },
+            "tci-StatesToAddModList": [
+              {
+                "tci-StateId": 0,
+                "qcl-Type1": {
+                  "referenceSignal": {
+                    "ssb": 0
+                  },
+                  "qcl-Type": "typeD"
+                }
+              }
+            ],
+            "resourceAllocation": "resourceAllocationType1",
+            "rbg-Size": "config1",
+            "prb-BundlingType": {
+              "staticBundling": {
+                "bundleSize": "wideband"
+              }
+            },
+            "zp-CSI-RS-ResourceToAddModList": [
+              {
+                "zp-CSI-RS-ResourceId": 0,
+                "resourceMapping": {
+                  "frequencyDomainAllocation": {
+                    "row4": "100"
+                  },
+                  "nrofPorts": "p4",
+                  "firstOFDMSymbolInTimeDomain": 8,
+                  "cdm-Type": "fd-CDM2",
+                  "density": {
+                  },
+                  "freqBand": {
+                    "startingRB": 0,
+                    "nrofRBs": 108
+                  }
+                },
+                "periodicityAndOffset": {
+                  "slots20": 2
+                }
+              }
+            ],
+            "p-ZP-CSI-RS-ResourceSet": {
+              {
+                "zp-CSI-RS-ResourceSetId": 0,
+                "zp-CSI-RS-ResourceIdList": [
+                  0
+                ]
+              }
+            }
+          }
+        }
+      },
+      "uplinkConfig": {
+        "initialUplinkBWP": {
+          "pucch-Config": {
+            {
+              "resourceSetToAddModList": [
+                {
+                  "pucch-ResourceSetId": 0,
+                  "resourceList": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                {
+                  "pucch-ResourceSetId": 1,
+                  "resourceList": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                  ]
+                }
+              ],
+              "resourceToAddModList": [
+                {
+                  "pucch-ResourceId": 0,
+                  "startingPRB": 0,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 0,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 1,
+                  "startingPRB": 0,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 6,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 2,
+                  "startingPRB": 105,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 0,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 3,
+                  "startingPRB": 105,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 6,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 4,
+                  "startingPRB": 1,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 0,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 5,
+                  "startingPRB": 1,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 6,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 6,
+                  "startingPRB": 104,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 0,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 7,
+                  "startingPRB": 104,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 6,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 8,
+                  "startingPRB": 4,
+                  "format": {
+                    "format1": {
+                      "initialCyclicShift": 0,
+                      "nrofSymbols": 14,
+                      "startingSymbolIndex": 0,
+                      "timeDomainOCC": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 9,
+                  "startingPRB": 6,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 10,
+                  "startingPRB": 6,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 2
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 11,
+                  "startingPRB": 6,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 4
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 12,
+                  "startingPRB": 6,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 6
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 13,
+                  "startingPRB": 6,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 8
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 14,
+                  "startingPRB": 6,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 10
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 15,
+                  "startingPRB": 6,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 12
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 16,
+                  "startingPRB": 99,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 0
+                    }
+                  }
+                },
+                {
+                  "pucch-ResourceId": 17,
+                  "startingPRB": 7,
+                  "format": {
+                    "format2": {
+                      "nrofPRBs": 1,
+                      "nrofSymbols": 2,
+                      "startingSymbolIndex": 4
+                    }
+                  }
+                }
+              ],
+              "format1": {
+                {
+                }
+              },
+              "format2": {
+                {
+                  "maxCodeRate": "zeroDot35",
+                  "simultaneousHARQ-ACK-CSI": "true"
+                }
+              },
+              "schedulingRequestResourceToAddModList": [
+                {
+                  "schedulingRequestResourceId": 1,
+                  "schedulingRequestID": 0,
+                  "periodicityAndOffset": {
+                    "sl20": 0
+                  },
+                  "resource": 8
+                }
+              ],
+              "dl-DataToUL-ACK": [
+                4
+              ]
+            }
+          },
+          "pusch-Config": {
+            {
+              "txConfig": "codebook",
+              "dmrs-UplinkForPUSCH-MappingTypeA": {
+                {
+                  "transformPrecodingDisabled": {
+                  }
+                }
+              },
+              "pusch-PowerControl": {
+                "msg3-Alpha": "alpha1",
+                "p0-NominalWithoutGrant": -76,
+                "p0-AlphaSets": [
+                  {
+                    "p0-PUSCH-AlphaSetId": 0,
+                    "p0": 0,
+                    "alpha": "alpha1"
+                  }
+                ],
+                "pathlossReferenceRSToAddModList": [
+                  {
+                    "pusch-PathlossReferenceRS-Id": 0,
+                    "referenceSignal": {
+                      "ssb-Index": 0
+                    }
+                  }
+                ],
+                "sri-PUSCH-MappingToAddModList": [
+                  {
+                    "sri-PUSCH-PowerControlId": 0,
+                    "sri-PUSCH-PathlossReferenceRS-Id": 0,
+                    "sri-P0-PUSCH-AlphaSetId": 0,
+                    "sri-PUSCH-ClosedLoopIndex": "i0"
+                  }
+                ]
+              },
+              "resourceAllocation": "resourceAllocationType1",
+              "transformPrecoder": "disabled",
+              "codebookSubset": "nonCoherent",
+              "maxRank": 1,
+              "uci-OnPUSCH": {
+                {
+                  "betaOffsets": {
+                    "semiStatic": {
+                      "betaOffsetACK-Index1": 9,
+                      "betaOffsetACK-Index2": 9,
+                      "betaOffsetACK-Index3": 9,
+                      "betaOffsetCSI-Part1-Index1": 9,
+                      "betaOffsetCSI-Part1-Index2": 9,
+                      "betaOffsetCSI-Part2-Index1": 9,
+                      "betaOffsetCSI-Part2-Index2": 9
+                    }
+                  },
+                  "scaling": "f1"
+                }
+              }
+            }
+          },
+          "srs-Config": {
+            {
+              "srs-ResourceSetToAddModList": [
+                {
+                  "srs-ResourceSetId": 0,
+                  "srs-ResourceIdList": [
+                    0
+                  ],
+                  "resourceType": {
+                    "aperiodic": {
+                      "aperiodicSRS-ResourceTrigger": 1,
+                      "slotOffset": 7
+                    }
+                  },
+                  "usage": "codebook",
+                  "p0": -84,
+                  "pathlossReferenceRS": {
+                    "ssb-Index": 0
+                  }
+                }
+              ],
+              "srs-ResourceToAddModList": [
+                {
+                  "srs-ResourceId": 0,
+                  "nrofSRS-Ports": "port1",
+                  "transmissionComb": {
+                    "n2": {
+                      "combOffset-n2": 0,
+                      "cyclicShift-n2": 0
+                    }
+                  },
+                  "resourceMapping": {
+                    "startPosition": 0,
+                    "nrofSymbols": "n1",
+                    "repetitionFactor": "n1"
+                  },
+                  "freqDomainPosition": 0,
+                  "freqDomainShift": 0,
+                  "freqHopping": {
+                    "c-SRS": 0,
+                    "b-SRS": 0,
+                    "b-hop": 0
+                  },
+                  "groupOrSequenceHopping": "neither",
+                  "resourceType": {
+                    "aperiodic": {
+                    }
+                  },
+                  "sequenceId": 99
+                }
+              ]
+            }
+          }
+        }
+      },
+      "pdsch-ServingCellConfig": {
+        {
+          "nrofHARQ-ProcessesForPDSCH": "n16"
+        }
+      },
+      "csi-MeasConfig": {
+        {
+          "nzp-CSI-RS-ResourceToAddModList": [
+            {
+              "nzp-CSI-RS-ResourceId": 0,
+              "resourceMapping": {
+                "frequencyDomainAllocation": {
+                  "row2": "100000000000"
+                },
+                "nrofPorts": "p1",
+                "firstOFDMSymbolInTimeDomain": 4,
+                "cdm-Type": "noCDM",
+                "density": {
+                },
+                "freqBand": {
+                  "startingRB": 0,
+                  "nrofRBs": 108
+                }
+              },
+              "powerControlOffset": 0,
+              "powerControlOffsetSS": "db0",
+              "scramblingID": 99,
+              "periodicityAndOffset": {
+                "slots20": 2
+              },
+              "qcl-InfoPeriodicCSI-RS": 0
+            },
+            {
+              "nzp-CSI-RS-ResourceId": 1,
+              "resourceMapping": {
+                "frequencyDomainAllocation": {
+                  "row1": "0001"
+                },
+                "nrofPorts": "p1",
+                "firstOFDMSymbolInTimeDomain": 4,
+                "cdm-Type": "noCDM",
+                "density": {
+                },
+                "freqBand": {
+                  "startingRB": 0,
+                  "nrofRBs": 108
+                }
+              },
+              "powerControlOffset": 0,
+              "powerControlOffsetSS": "db0",
+              "scramblingID": 99,
+              "periodicityAndOffset": {
+                "slots20": 12
+              },
+              "qcl-InfoPeriodicCSI-RS": 0
+            },
+            {
+              "nzp-CSI-RS-ResourceId": 2,
+              "resourceMapping": {
+                "frequencyDomainAllocation": {
+                  "row1": "0001"
+                },
+                "nrofPorts": "p1",
+                "firstOFDMSymbolInTimeDomain": 8,
+                "cdm-Type": "noCDM",
+                "density": {
+                },
+                "freqBand": {
+                  "startingRB": 0,
+                  "nrofRBs": 108
+                }
+              },
+              "powerControlOffset": 0,
+              "powerControlOffsetSS": "db0",
+              "scramblingID": 99,
+              "periodicityAndOffset": {
+                "slots20": 12
+              },
+              "qcl-InfoPeriodicCSI-RS": 0
+            },
+            {
+              "nzp-CSI-RS-ResourceId": 3,
+              "resourceMapping": {
+                "frequencyDomainAllocation": {
+                  "row1": "0001"
+                },
+                "nrofPorts": "p1",
+                "firstOFDMSymbolInTimeDomain": 4,
+                "cdm-Type": "noCDM",
+                "density": {
+                },
+                "freqBand": {
+                  "startingRB": 0,
+                  "nrofRBs": 108
+                }
+              },
+              "powerControlOffset": 0,
+              "powerControlOffsetSS": "db0",
+              "scramblingID": 99,
+              "periodicityAndOffset": {
+                "slots20": 13
+              },
+              "qcl-InfoPeriodicCSI-RS": 0
+            },
+            {
+              "nzp-CSI-RS-ResourceId": 4,
+              "resourceMapping": {
+                "frequencyDomainAllocation": {
+                  "row1": "0001"
+                },
+                "nrofPorts": "p1",
+                "firstOFDMSymbolInTimeDomain": 8,
+                "cdm-Type": "noCDM",
+                "density": {
+                },
+                "freqBand": {
+                  "startingRB": 0,
+                  "nrofRBs": 108
+                }
+              },
+              "powerControlOffset": 0,
+              "powerControlOffsetSS": "db0",
+              "scramblingID": 99,
+              "periodicityAndOffset": {
+                "slots20": 13
+              },
+              "qcl-InfoPeriodicCSI-RS": 0
+            }
+          ],
+          "nzp-CSI-RS-ResourceSetToAddModList": [
+            {
+              "nzp-CSI-ResourceSetId": 0,
+              "nzp-CSI-RS-Resources": [
+                0
+              ]
+            },
+            {
+              "nzp-CSI-ResourceSetId": 1,
+              "nzp-CSI-RS-Resources": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "trs-Info": "true"
+            }
+          ],
+          "csi-IM-ResourceToAddModList": [
+            {
+              "csi-IM-ResourceId": 0,
+              "csi-IM-ResourceElementPattern": {
+                "pattern1": {
+                  "subcarrierLocation-p1": "s8",
+                  "symbolLocation-p1": 8
+                }
+              },
+              "freqBand": {
+                "startingRB": 0,
+                "nrofRBs": 108
+              },
+              "periodicityAndOffset": {
+                "slots20": 2
+              }
+            }
+          ],
+          "csi-IM-ResourceSetToAddModList": [
+            {
+              "csi-IM-ResourceSetId": 0,
+              "csi-IM-Resources": [
+                0
+              ]
+            }
+          ],
+          "csi-ResourceConfigToAddModList": [
+            {
+              "csi-ResourceConfigId": 0,
+              "csi-RS-ResourceSetList": {
+                "nzp-CSI-RS-SSB": {
+                  "nzp-CSI-RS-ResourceSetList": [
+                    0
+                  ]
+                }
+              },
+              "bwp-Id": 0,
+              "resourceType": "periodic"
+            },
+            {
+              "csi-ResourceConfigId": 1,
+              "csi-RS-ResourceSetList": {
+                "csi-IM-ResourceSetList": [
+                  0
+                ]
+              },
+              "bwp-Id": 0,
+              "resourceType": "periodic"
+            },
+            {
+              "csi-ResourceConfigId": 2,
+              "csi-RS-ResourceSetList": {
+                "nzp-CSI-RS-SSB": {
+                  "nzp-CSI-RS-ResourceSetList": [
+                    1
+                  ]
+                }
+              },
+              "bwp-Id": 0,
+              "resourceType": "periodic"
+            }
+          ],
+          "csi-ReportConfigToAddModList": [
+            {
+              "reportConfigId": 0,
+              "resourcesForChannelMeasurement": 0,
+              "csi-IM-ResourcesForInterference": 1,
+              "reportConfigType": {
+                "periodic": {
+                  "reportSlotConfig": {
+                    "slots20": 6
+                  },
+                  "pucch-CSI-ResourceList": [
+                    {
+                      "uplinkBandwidthPartId": 0,
+                      "pucch-Resource": 17
+                    }
+                  ]
+                }
+              },
+              "reportQuantity": {
+              },
+              "reportFreqConfiguration": {
+                "cqi-FormatIndicator": "widebandCQI",
+                "pmi-FormatIndicator": "widebandPMI"
+              },
+              "timeRestrictionForChannelMeasurements": "notConfigured",
+              "timeRestrictionForInterferenceMeasurements": "notConfigured",
+              "groupBasedBeamReporting": {
+                "disabled": {
+                }
+              },
+              "cqi-Table": "table1",
+              "subbandSize": "value1",
+              "non-PMI-PortIndication": [
+                {
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tag-Id": 0
+    }
+  }
+}
+2025-01-09T19:06:09.160909 [CU-CP   ] [I] ue=0 c-rnti=0x4601: UE created
+2025-01-09T19:06:09.160911 [CU-CP-F1] [D] ue=0 cu_ue=0: Adding F1AP UE context
+2025-01-09T19:06:09.160924 [CU-CP-F1] [D] ue=0 cu_ue=0: Adding du_ue=0
+2025-01-09T19:06:09.160937 [CU-CP-F1] [I] ue=0 du_ue=0 cu_ue=0: Added UE context
+2025-01-09T19:06:09.160997 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx CCCH UL rrcSetupRequest (6 B)
+2025-01-09T19:06:09.161004 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized rrcSetupRequest: [
+  {
+    "UL-CCCH-Message": {
+      "message": {
+        "c1": {
+          "rrcSetupRequest": {
+            "rrcSetupRequest": {
+              "ue-Identity": {
+                "randomValue": "010100001001001000000111101111101001010"
+              },
+              "establishmentCause": "mo-Signalling",
+              "spare": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.161018 [RRC     ] [D] ue=0 c-rnti=0x4601: Creating SRB1
+2025-01-09T19:06:09.161061 [PDCP    ] [I] ue=0 SRB1 DL: PDCP configured. rb_type=SRB rlc_mode=AM sn_size=12 discard_timer={na} count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false
+2025-01-09T19:06:09.161375 [PDCP    ] [I] ue=0 SRB1 UL: PDCP configured. rb_type=SRB rlc_mode=AM sn_size=12 t_reordering=infinity count_notify=3221225472 count_max=4294967294
+2025-01-09T19:06:09.161642 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx CCCH DL rrcSetup (295 B)
+2025-01-09T19:06:09.161644 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized rrcSetup: [
+  {
+    "DL-CCCH-Message": {
+      "message": {
+        "c1": {
+          "rrcSetup": {
+            "rrc-TransactionIdentifier": 0,
+            "criticalExtensions": {
+              "rrcSetup": {
+                "radioBearerConfig": {
+                  "srb-ToAddModList": [
+                    {
+                      "srb-Identity": 1
+                    }
+                  ]
+                },
+                "masterCellGroup": "5c00b001117aec701061e0007c0204683c080004120981950001ffff8000000106e1084000240104a00418000001034c080a28500151450001035564841c001040c2050c1c9c48a163068e1e408800004280004005a80008d2428000cd25a80010024280014025a80018d0428001cd05a800200842800240c8200a0320902c0c8280c0320b0340c8300e0320d03c0c8381031a080440e829024b181201012681d2083c5df81821c00000038ffd294a5294f28160000219760000000000000000031c56aa28023800c000410015108c6a200e020210800544231ab00381008820015108c6ac00e060210800544231ab40382008820015108c6ad00080000008218081018201c1a00054510000001002000403000404801100530000114c02271c0060"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.161645 [RRC     ] [D] ue=0 c-rnti=0x4601: TX SRB0 PDU
+2025-01-09T19:06:09.161710 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: DLRRCMessageTransfer
+2025-01-09T19:06:09.161756 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 327 bytes
+2025-01-09T19:06:09.200576 [SCTP-GW ] [D] F1-C assoc=323321: Received 62 bytes
+2025-01-09T19:06:09.200617 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.200621 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.200641 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=33
+2025-01-09T19:06:09.200642 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=0 rx_deliv=0 rx_reord=0
+2025-01-09T19:06:09.200643 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=33 sn=0 count=0
+2025-01-09T19:06:09.200647 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=3. count=0 pdu_len=33
+2025-01-09T19:06:09.200647 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=0
+2025-01-09T19:06:09.200648 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=0 to window.
+2025-01-09T19:06:09.200650 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=0
+2025-01-09T19:06:09.200651 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=0 from window
+2025-01-09T19:06:09.200651 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=1 rx_deliv=1 rx_reord=0
+2025-01-09T19:06:09.200693 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL rrcSetupComplete (27 B)
+2025-01-09T19:06:09.200695 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized rrcSetupComplete: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "rrcSetupComplete": {
+            "rrc-TransactionIdentifier": 0,
+            "criticalExtensions": {
+              "rrcSetupComplete": {
+                "selectedPLMN-Identity": 1,
+                "dedicatedNAS-Message": "7e004179000d0100f1100000000010325476082e02f070"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.200704 [NGAP    ] [D] ue=0 ran_ue=0: NGAP UE context created
+2025-01-09T19:06:09.200729 [NGAP    ] [D] ue=0 ran_ue=0: Starting PDU session creation timer (timeout=3000ms)...
+2025-01-09T19:06:09.200735 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0: InitialUEMessage
+{
+  "initiatingMessage": {
+    "procedureCode": 15,
+    "criticality": "ignore",
+    "value": {
+      "InitialUEMessage": {
+        "protocolIEs": {
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e004179000d0100f1100000000010325476082e02f070",
+          "id": 121,
+          "criticality": "reject",
+          {
+            "userLocationInformationNR": {
+              "nR-CGI": {
+                "pLMNIdentity": "00f110",
+                "nRCellIdentity": "000000000000011001101100000000000000"
+              },
+              "tAI": {
+                "pLMNIdentity": "00f110",
+                "tAC": "00004d"
+              }
+            }
+          },
+          "id": 90,
+          "criticality": "ignore",
+          "Value": "mo-Signalling",
+          "id": 112,
+          "criticality": "ignore",
+          "Value": "requested"
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.200749 [SCTP-GW ] [D] N2: Sending PDU of 70 bytes
+2025-01-09T19:06:09.200801 [RRC     ] [D] ue=0 c-rnti=0x4601: "RRC Setup Procedure" finished successfully
+2025-01-09T19:06:09.217219 [SCTP-GW ] [D] N2: Received 66 bytes
+2025-01-09T19:06:09.217327 [NGAP    ] [I] Rx PDU ue=0 ran_ue=0 amf_ue=3: DownlinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 4,
+    "criticality": "ignore",
+    "value": {
+      "DownlinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e0056010200002141acfaf2ceb19de524e422895492fadc2010c73f50387d1080006e1f3dfc46280b4c"
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.217329 [NGAP    ] [D] ue=0 ran_ue=0: Setting AMF-UE-NGAP-ID=3
+2025-01-09T19:06:09.217344 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "DL NAS Message Transfer Procedure" initialized
+2025-01-09T19:06:09.217378 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx DCCH DL dlInformationTransfer (45 B)
+2025-01-09T19:06:09.217380 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized dlInformationTransfer: [
+  {
+    "DL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "dlInformationTransfer": {
+            "rrc-TransactionIdentifier": 0,
+            "criticalExtensions": {
+              "dlInformationTransfer": {
+                "dedicatedNAS-Message": "7e0056010200002141acfaf2ceb19de524e422895492fadc2010c73f50387d1080006e1f3dfc46280b4c"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.217381 [PDCP    ] [D] ue=0 SRB1 DL: TX SDU. sdu_len=45
+2025-01-09T19:06:09.217383 [PDCP    ] [I] ue=0 SRB1 DL: TX PDU. type=data pdu_len=51 sn=0 count=0 is_retx=false
+2025-01-09T19:06:09.217384 [RRC     ] [D] ue=0 c-rnti=0x4601: TX 0 PDU
+2025-01-09T19:06:09.217399 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: DLRRCMessageTransfer
+2025-01-09T19:06:09.217408 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 80 bytes
+2025-01-09T19:06:09.217447 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "DL NAS Message Transfer Procedure" finalized
+2025-01-09T19:06:09.260519 [SCTP-GW ] [D] F1-C assoc=323321: Received 59 bytes
+2025-01-09T19:06:09.260561 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.260566 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.260572 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=30
+2025-01-09T19:06:09.260574 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=1 rx_deliv=1 rx_reord=0
+2025-01-09T19:06:09.260575 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=30 sn=1 count=1
+2025-01-09T19:06:09.260577 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=3. count=1 pdu_len=30
+2025-01-09T19:06:09.260579 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=1
+2025-01-09T19:06:09.260581 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=1 to window.
+2025-01-09T19:06:09.260581 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=1
+2025-01-09T19:06:09.260583 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=1 from window
+2025-01-09T19:06:09.260583 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=2 rx_deliv=2 rx_reord=0
+2025-01-09T19:06:09.260610 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL ulInformationTransfer (24 B)
+2025-01-09T19:06:09.260612 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized ulInformationTransfer: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "ulInformationTransfer": {
+            "criticalExtensions": {
+              "ulInformationTransfer": {
+                "dedicatedNAS-Message": "7e00572d10f9a1f8e479b3ce4acbd812aa4ed332ad"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.260637 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0 amf_ue=3: UplinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 46,
+    "criticality": "ignore",
+    "value": {
+      "UplinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e00572d10f9a1f8e479b3ce4acbd812aa4ed332ad",
+          "id": 121,
+          "criticality": "ignore",
+          {
+            "userLocationInformationNR": {
+              "nR-CGI": {
+                "pLMNIdentity": "00f110",
+                "nRCellIdentity": "000000000000011001101100000000000000"
+              },
+              "tAI": {
+                "pLMNIdentity": "00f110",
+                "tAC": "00004d"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.260648 [SCTP-GW ] [D] N2: Sending PDU of 64 bytes
+2025-01-09T19:06:09.264906 [SCTP-GW ] [D] N2: Received 43 bytes
+2025-01-09T19:06:09.264969 [NGAP    ] [I] Rx PDU ue=0 ran_ue=0 amf_ue=3: DownlinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 4,
+    "criticality": "ignore",
+    "value": {
+      "DownlinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e031067549e007e005d020102f070e1360102"
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.264973 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "DL NAS Message Transfer Procedure" initialized
+2025-01-09T19:06:09.265055 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx DCCH DL dlInformationTransfer (22 B)
+2025-01-09T19:06:09.265057 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized dlInformationTransfer: [
+  {
+    "DL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "dlInformationTransfer": {
+            "rrc-TransactionIdentifier": 0,
+            "criticalExtensions": {
+              "dlInformationTransfer": {
+                "dedicatedNAS-Message": "7e031067549e007e005d020102f070e1360102"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.265059 [PDCP    ] [D] ue=0 SRB1 DL: TX SDU. sdu_len=22
+2025-01-09T19:06:09.265061 [PDCP    ] [I] ue=0 SRB1 DL: TX PDU. type=data pdu_len=28 sn=1 count=1 is_retx=false
+2025-01-09T19:06:09.265062 [RRC     ] [D] ue=0 c-rnti=0x4601: TX 0 PDU
+2025-01-09T19:06:09.265124 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: DLRRCMessageTransfer
+2025-01-09T19:06:09.265136 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 57 bytes
+2025-01-09T19:06:09.265231 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "DL NAS Message Transfer Procedure" finalized
+2025-01-09T19:06:09.290341 [CU-CP   ] [D] num_f1ap_ues=1 num_rrc_ues=1 num_ngap_ues=1 num_e1ap_ues=0 num_cu_cp_ues=1
+2025-01-09T19:06:09.300396 [SCTP-GW ] [D] F1-C assoc=323321: Received 94 bytes
+2025-01-09T19:06:09.300432 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.300435 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.300439 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=65
+2025-01-09T19:06:09.300440 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=2 rx_deliv=2 rx_reord=0
+2025-01-09T19:06:09.300441 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=65 sn=2 count=2
+2025-01-09T19:06:09.300442 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=1. count=2 pdu_len=65
+2025-01-09T19:06:09.300443 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=2
+2025-01-09T19:06:09.300445 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=2 to window.
+2025-01-09T19:06:09.300445 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=2
+2025-01-09T19:06:09.300446 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=2 from window
+2025-01-09T19:06:09.300447 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=3 rx_deliv=3 rx_reord=0
+2025-01-09T19:06:09.300468 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL ulInformationTransfer (59 B)
+2025-01-09T19:06:09.300470 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized ulInformationTransfer: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "ulInformationTransfer": {
+            "criticalExtensions": {
+              "ulInformationTransfer": {
+                "dedicatedNAS-Message": "7e04f83b4bcf007e005e7700093535940096783351f371001f7e004179000d0100f11000000000103254760810030000002e02f070530100"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.300490 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0 amf_ue=3: UplinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 46,
+    "criticality": "ignore",
+    "value": {
+      "UplinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e04f83b4bcf007e005e7700093535940096783351f371001f7e004179000d0100f11000000000103254760810030000002e02f070530100",
+          "id": 121,
+          "criticality": "ignore",
+          {
+            "userLocationInformationNR": {
+              "nR-CGI": {
+                "pLMNIdentity": "00f110",
+                "nRCellIdentity": "000000000000011001101100000000000000"
+              },
+              "tAI": {
+                "pLMNIdentity": "00f110",
+                "tAC": "00004d"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.300501 [SCTP-GW ] [D] N2: Sending PDU of 99 bytes
+2025-01-09T19:06:09.304381 [CU-UP   ] [D] num_e1ap_ues=0 num_cu_up_ues=0
+2025-01-09T19:06:09.316963 [SCTP-GW ] [D] N2: Received 149 bytes
+2025-01-09T19:06:09.317438 [NGAP    ] [I] Rx PDU ue=0 ran_ue=0 amf_ue=3: InitialContextSetupRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 14,
+    "criticality": "reject",
+    "value": {
+      "InitialContextSetupRequest": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 28,
+          "criticality": "reject",
+          {
+            "pLMNIdentity": "00f110",
+            "aMFRegionID": "00000010",
+            "aMFSetID": "0000000001",
+            "aMFPointer": "000000"
+          },
+          "id": 0,
+          "criticality": "reject",
+          "Value": [
+            {
+              "s-NSSAI": {
+                "sST": "01"
+              }
+            }
+          ],
+          "id": 119,
+          "criticality": "reject",
+          {
+            "nRencryptionAlgorithms": "1110000000000000",
+            "nRintegrityProtectionAlgorithms": "1110000000000000",
+            "eUTRAencryptionAlgorithms": "0000000000000000",
+            "eUTRAintegrityProtectionAlgorithms": "0000000000000000"
+          },
+          "id": 94,
+          "criticality": "reject",
+          "Value": "0011111111101010011000100010001111000111110111010000100100001010011010000110100011011000100101100001110000011011011110000101100110001100111101110110010111100000010110000101010101100101110100111111101111011101110000001000011110101000110101001100101001001011",
+          "id": 34,
+          "criticality": "ignore",
+          "Value": "0011010100110100100100000000011010011000111111111111111101010011",
+          "id": 38,
+          "criticality": "ignore",
+          "Value": "7e0254fbf93b017e0042010177000bf200f110020040c000035354074000f11000004d15020101210201005e01a9"
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.317444 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: K_gnb
+2025-01-09T19:06:09.317445 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: Supported integrity algorithms: N[I|E]A1=true, N[I|E]A2=true, N[I|E]A3=true
+2025-01-09T19:06:09.317446 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: Supported ciphering algorithms: N[I|E]A1=true, N[I|E]A2=true, N[I|E]A3=true
+2025-01-09T19:06:09.317451 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "Initial Context Setup Procedure" initialized
+2025-01-09T19:06:09.317471 [CU-CP   ] [I] ue=0: "Initial Context Setup Routine" initialized
+2025-01-09T19:06:09.317472 [CU-CP   ] [D] Integrity protection algorithms preference list: NIA2, NIA1, NIA3, NIA0
+2025-01-09T19:06:09.317472 [CU-CP   ] [D] Ciphering algorithms preference list: NEA0, NEA2, NEA1, NEA3
+2025-01-09T19:06:09.317473 [CU-CP   ] [D] Integrity protection algorithms supported list: N[I|E]A1=true, N[I|E]A2=true, N[I|E]A3=true
+2025-01-09T19:06:09.317473 [CU-CP   ] [D] Ciphering algorithms preference list: N[I|E]A1=true, N[I|E]A2=true, N[I|E]A3=true
+2025-01-09T19:06:09.317474 [CU-CP   ] [D] Selected security algorithms integrity=NIA2 ciphering=NEA0
+2025-01-09T19:06:09.317515 [SEC     ] [I] K_gNB: 
+	3f ea 62 23 c7 dd 09 0a 68 68 d8 96 1c 1b 78 59
+	8c f7 65 e0 58 55 65 d3 fb dd c0 87 a8 d4 ca 4b
+2025-01-09T19:06:09.317515 [SEC     ] [I] RRC Integrity Key: 
+	59 18 c9 56 e7 06 25 89 83 75 78 9b a9 f5 74 cb
+	7a 9f 93 89 27 c3 d2 d1 f2 25 11 cd fa ea 3d b6
+2025-01-09T19:06:09.317516 [SEC     ] [I] RRC Encryption Key: 
+	3b 44 a7 ed a2 a6 e6 a1 18 d1 b2 64 18 87 76 07
+	33 4a 92 30 8a 0e f3 2f df 71 8f 56 98 7b d5 eb
+2025-01-09T19:06:09.317516 [SEC     ] [I] UP Integrity Key: 
+	79 99 1a 05 65 fe a7 b6 59 87 68 21 5a 3d 9e b7
+	ad c5 74 2d 17 df 26 e9 2c 51 58 65 fe 26 6b 17
+2025-01-09T19:06:09.317516 [SEC     ] [I] UP Encryption Key: 
+	bd d0 2a 43 1f c8 26 bf e0 54 ae ee a5 42 9a ed
+	09 f7 bc 12 ea dc df 2f cb f9 34 96 7b c5 7e 8d
+2025-01-09T19:06:09.317584 [PDCP    ] [I] ue=0 SRB1 UL: Security configured: NIA2 (on) NEA0 (off) domain=RRC
+2025-01-09T19:06:09.317585 [PDCP    ] [I] ue=0 SRB1 UL: 128 K_int: 
+	7a 9f 93 89 27 c3 d2 d1 f2 25 11 cd fa ea 3d b6
+2025-01-09T19:06:09.317586 [PDCP    ] [I] ue=0 SRB1 UL: 128 K_enc: 
+	33 4a 92 30 8a 0e f3 2f df 71 8f 56 98 7b d5 eb
+2025-01-09T19:06:09.317588 [PDCP    ] [I] ue=0 SRB1 DL: Security configured: NIA2 (on) NEA0 (off) domain=RRC
+2025-01-09T19:06:09.317589 [PDCP    ] [I] ue=0 SRB1 DL: 128 K_int: 
+	7a 9f 93 89 27 c3 d2 d1 f2 25 11 cd fa ea 3d b6
+2025-01-09T19:06:09.317589 [PDCP    ] [I] ue=0 SRB1 DL: 128 K_enc: 
+	33 4a 92 30 8a 0e f3 2f df 71 8f 56 98 7b d5 eb
+2025-01-09T19:06:09.317606 [PDCP    ] [D] ue=0 SRB1 DL: TX SDU. sdu_len=3
+2025-01-09T19:06:09.317611 [PDCP    ] [I] ue=0 SRB1 DL: TX PDU. type=data pdu_len=9 sn=2 count=2 is_retx=false
+2025-01-09T19:06:09.317626 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx DCCH DL securityModeCommand (9 B)
+2025-01-09T19:06:09.317631 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized securityModeCommand: [
+  {
+    "DL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "securityModeCommand": {
+            "rrc-TransactionIdentifier": 1,
+            "criticalExtensions": {
+              "securityModeCommand": {
+                "securityConfigSMC": {
+                  "securityAlgorithmConfig": {
+                    "cipheringAlgorithm": "nea0",
+                    "integrityProtAlgorithm": "nia2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.317672 [CU-CP-F1] [D] ue=0 proc="UE Context Setup Procedure": started...
+2025-01-09T19:06:09.317674 [CU-CP-F1] [D] ue=0 du_ue=0 cu_ue=0 proc="UE Context Setup Procedure": UE context found
+2025-01-09T19:06:09.317717 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: UEContextSetupRequest
+2025-01-09T19:06:09.317763 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 56 bytes
+2025-01-09T19:06:09.320571 [SCTP-GW ] [D] F1-C assoc=323321: Received 323 bytes
+2025-01-09T19:06:09.320752 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: UEContextSetupResponse
+2025-01-09T19:06:09.320762 [CU-CP-F1] [D] ue=0 du_ue=0 cu_ue=0 proc="UE Context Setup Procedure": Updated UE gNB-DU-UE-ID
+2025-01-09T19:06:09.320764 [CU-CP-F1] [D] ue=0 proc="UE Context Setup Procedure": finished successfully
+2025-01-09T19:06:09.320771 [RRC     ] [D] ue=0 c-rnti=0x4601: Awaiting RRC Security Mode Complete (timeout=720ms)
+2025-01-09T19:06:09.522186 [SCTP-GW ] [D] F1-C assoc=323321: Received 37 bytes
+2025-01-09T19:06:09.522260 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.522263 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.522266 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=8
+2025-01-09T19:06:09.522268 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=3 rx_deliv=3 rx_reord=0
+2025-01-09T19:06:09.522269 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=8 sn=3 count=3
+2025-01-09T19:06:09.522270 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=1. count=3 pdu_len=8
+2025-01-09T19:06:09.522276 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=3
+2025-01-09T19:06:09.522277 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=3 to window.
+2025-01-09T19:06:09.522278 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=3
+2025-01-09T19:06:09.522279 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=3 from window
+2025-01-09T19:06:09.522279 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=4 rx_deliv=4 rx_reord=0
+2025-01-09T19:06:09.522295 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL securityModeComplete (2 B)
+2025-01-09T19:06:09.522296 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized securityModeComplete: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "securityModeComplete": {
+            "rrc-TransactionIdentifier": 1,
+            "criticalExtensions": {
+              "securityModeComplete": {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.522300 [RRC     ] [D] ue=0 c-rnti=0x4601: Received RRC Security Mode Complete
+2025-01-09T19:06:09.522324 [PDCP    ] [I] ue=0 SRB1 UL: Security configured: NIA2 (on) NEA0 (on) domain=RRC
+2025-01-09T19:06:09.522324 [PDCP    ] [I] ue=0 SRB1 UL: 128 K_int: 
+	7a 9f 93 89 27 c3 d2 d1 f2 25 11 cd fa ea 3d b6
+2025-01-09T19:06:09.522325 [PDCP    ] [I] ue=0 SRB1 UL: 128 K_enc: 
+	33 4a 92 30 8a 0e f3 2f df 71 8f 56 98 7b d5 eb
+2025-01-09T19:06:09.522327 [PDCP    ] [I] ue=0 SRB1 DL: Security configured: NIA2 (on) NEA0 (on) domain=RRC
+2025-01-09T19:06:09.522328 [PDCP    ] [I] ue=0 SRB1 DL: 128 K_int: 
+	7a 9f 93 89 27 c3 d2 d1 f2 25 11 cd fa ea 3d b6
+2025-01-09T19:06:09.522328 [PDCP    ] [I] ue=0 SRB1 DL: 128 K_enc: 
+	33 4a 92 30 8a 0e f3 2f df 71 8f 56 98 7b d5 eb
+2025-01-09T19:06:09.522332 [RRC     ] [D] ue=0 c-rnti=0x4601: "RRC UE Capability Transfer Procedure" initialized
+2025-01-09T19:06:09.522374 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx DCCH DL ueCapabilityEnquiry (8 B)
+2025-01-09T19:06:09.522375 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized ueCapabilityEnquiry: [
+  {
+    "DL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "ueCapabilityEnquiry": {
+            "rrc-TransactionIdentifier": 2,
+            "criticalExtensions": {
+              "ueCapabilityEnquiry": {
+                "ue-CapabilityRAT-RequestList": [
+                  {
+                    "rat-Type": "nr",
+                    "capabilityRequestFilter": "80040020"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.522376 [PDCP    ] [D] ue=0 SRB1 DL: TX SDU. sdu_len=8
+2025-01-09T19:06:09.522378 [PDCP    ] [I] ue=0 SRB1 DL: TX PDU. type=data pdu_len=14 sn=3 count=3 is_retx=false
+2025-01-09T19:06:09.522379 [RRC     ] [D] ue=0 c-rnti=0x4601: TX 0 PDU
+2025-01-09T19:06:09.522386 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: DLRRCMessageTransfer
+2025-01-09T19:06:09.522392 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 43 bytes
+2025-01-09T19:06:09.560439 [SCTP-GW ] [D] F1-C assoc=323321: Received 65 bytes
+2025-01-09T19:06:09.560476 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.560480 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.560523 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=36
+2025-01-09T19:06:09.560525 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=4 rx_deliv=4 rx_reord=0
+2025-01-09T19:06:09.560526 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=36 sn=4 count=4
+2025-01-09T19:06:09.560528 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=2. count=4 pdu_len=36
+2025-01-09T19:06:09.560533 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=4
+2025-01-09T19:06:09.560534 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=4 to window.
+2025-01-09T19:06:09.560535 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=4
+2025-01-09T19:06:09.560536 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=4 from window
+2025-01-09T19:06:09.560537 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=5 rx_deliv=5 rx_reord=0
+2025-01-09T19:06:09.560596 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL ueCapabilityInformation (30 B)
+2025-01-09T19:06:09.560598 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized ueCapabilityInformation: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "ueCapabilityInformation": {
+            "rrc-TransactionIdentifier": 2,
+            "criticalExtensions": {
+              "ueCapabilityInformation": {
+                "ue-CapabilityRAT-ContainerList": [
+                  {
+                    "rat-Type": "nr",
+                    "ue-CapabilityRAT-Container": "8100100007800000000040000000080400801000280000400001"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.560713 [RRC     ] [D] ue=0 c-rnti=0x4601: UE Capabilities:
+{
+  "accessStratumRelease": "rel15",
+  "pdcp-Parameters": {
+    "supportedROHC-Profiles": {
+      "profile0x0000": false,
+      "profile0x0001": false,
+      "profile0x0002": false,
+      "profile0x0003": false,
+      "profile0x0004": false,
+      "profile0x0006": false,
+      "profile0x0101": false,
+      "profile0x0102": false,
+      "profile0x0103": false,
+      "profile0x0104": false
+    },
+    "maxNumberROHC-ContextSessions": "cs2",
+    "shortSN": "supported"
+  },
+  "rlc-Parameters": {
+    "am-WithShortSN": "supported",
+    "um-WithShortSN": "supported",
+    "um-WithLongSN": "supported"
+  },
+  "phy-Parameters": {
+    "phy-ParametersCommon": {
+    }
+  },
+  "rf-Parameters": {
+    "supportedBandListNR": [
+      {
+        "bandNR": 3
+      }
+    ],
+    "supportedBandCombinationList": [
+      {
+        "bandList": [
+          {
+            "nr": {
+              "bandNR": 3
+            }
+          }
+        ],
+        "featureSetCombination": 0
+      }
+    ]
+  },
+  "featureSets": {
+    "featureSetsDownlinkPerCC": [
+      {
+        "supportedSubcarrierSpacingDL": "kHz15",
+        "supportedBandwidthDL": {
+          "fr1": "mhz10"
+        }
+      }
+    ],
+    "featureSetsUplinkPerCC": [
+      {
+        "supportedSubcarrierSpacingUL": "kHz15",
+        "supportedBandwidthUL": {
+          "fr1": "mhz10"
+        }
+      }
+    ]
+  }
+}
+2025-01-09T19:06:09.560719 [RRC     ] [D] ue=0 c-rnti=0x4601: "RRC UE Capability Transfer Procedure" finalized
+2025-01-09T19:06:09.560722 [CU-CP   ] [D] ue=0: Forwarding NAS PDU to RRC
+2025-01-09T19:06:09.560767 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx DCCH DL dlInformationTransfer (49 B)
+2025-01-09T19:06:09.560768 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized dlInformationTransfer: [
+  {
+    "DL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "dlInformationTransfer": {
+            "rrc-TransactionIdentifier": 0,
+            "criticalExtensions": {
+              "dlInformationTransfer": {
+                "dedicatedNAS-Message": "7e0254fbf93b017e0042010177000bf200f110020040c000035354074000f11000004d15020101210201005e01a9"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.560769 [PDCP    ] [D] ue=0 SRB1 DL: TX SDU. sdu_len=49
+2025-01-09T19:06:09.560795 [PDCP    ] [I] ue=0 SRB1 DL: TX PDU. type=data pdu_len=55 sn=4 count=4 is_retx=false
+2025-01-09T19:06:09.560796 [RRC     ] [D] ue=0 c-rnti=0x4601: TX 0 PDU
+2025-01-09T19:06:09.560814 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: DLRRCMessageTransfer
+2025-01-09T19:06:09.560823 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 84 bytes
+2025-01-09T19:06:09.560903 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: Scheduling UE Radio Capability Info Indication
+2025-01-09T19:06:09.560909 [CU-CP   ] [I] ue=0: "Initial Context Setup Routine" finished successfully
+2025-01-09T19:06:09.560920 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0 amf_ue=3: InitialContextSetupResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 14,
+    "criticality": "reject",
+    "value": {
+      "InitialContextSetupResponse": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "ignore",
+          "Value": 3,
+          "id": 85,
+          "criticality": "ignore",
+          "Value": 0
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.560926 [SCTP-GW ] [D] N2: Sending PDU of 19 bytes
+2025-01-09T19:06:09.560999 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "Initial Context Setup Procedure" finished successfully
+2025-01-09T19:06:09.561004 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0: UERadioCapabilityInfoIndication
+{
+  "initiatingMessage": {
+    "procedureCode": 44,
+    "criticality": "ignore",
+    "value": {
+      "UERadioCapabilityInfoIndication": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 117,
+          "criticality": "ignore",
+          "Value": "00e081a81001000078000000000400000000804008010002800004000010"
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.561011 [SCTP-GW ] [D] N2: Sending PDU of 54 bytes
+2025-01-09T19:06:09.600472 [SCTP-GW ] [D] F1-C assoc=323321: Received 48 bytes
+2025-01-09T19:06:09.600524 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.600528 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.600531 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=19
+2025-01-09T19:06:09.600532 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=5 rx_deliv=5 rx_reord=0
+2025-01-09T19:06:09.600534 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=19 sn=5 count=5
+2025-01-09T19:06:09.600535 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=2. count=5 pdu_len=19
+2025-01-09T19:06:09.600540 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=5
+2025-01-09T19:06:09.600541 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=5 to window.
+2025-01-09T19:06:09.600541 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=5
+2025-01-09T19:06:09.600542 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=5 from window
+2025-01-09T19:06:09.600543 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=6 rx_deliv=6 rx_reord=0
+2025-01-09T19:06:09.600566 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL ulInformationTransfer (13 B)
+2025-01-09T19:06:09.600567 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized ulInformationTransfer: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "ulInformationTransfer": {
+            "criticalExtensions": {
+              "ulInformationTransfer": {
+                "dedicatedNAS-Message": "7e02238d34bb017e0043"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.600585 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0 amf_ue=3: UplinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 46,
+    "criticality": "ignore",
+    "value": {
+      "UplinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e02238d34bb017e0043",
+          "id": 121,
+          "criticality": "ignore",
+          {
+            "userLocationInformationNR": {
+              "nR-CGI": {
+                "pLMNIdentity": "00f110",
+                "nRCellIdentity": "000000000000011001101100000000000000"
+              },
+              "tAI": {
+                "pLMNIdentity": "00f110",
+                "tAC": "00004d"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.600596 [SCTP-GW ] [D] N2: Sending PDU of 53 bytes
+2025-01-09T19:06:09.683199 [SCTP-GW ] [D] N2: Received 75 bytes
+2025-01-09T19:06:09.683252 [NGAP    ] [I] Rx PDU ue=0 ran_ue=0 amf_ue=3: DownlinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 4,
+    "criticality": "ignore",
+    "value": {
+      "DownlinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e02129daa5c027e0054430f90004f00700065006e003500470053450990004e006500780074460a475210909160900a490100"
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.683256 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "DL NAS Message Transfer Procedure" initialized
+2025-01-09T19:06:09.683279 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx DCCH DL dlInformationTransfer (54 B)
+2025-01-09T19:06:09.683280 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized dlInformationTransfer: [
+  {
+    "DL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "dlInformationTransfer": {
+            "rrc-TransactionIdentifier": 0,
+            "criticalExtensions": {
+              "dlInformationTransfer": {
+                "dedicatedNAS-Message": "7e02129daa5c027e0054430f90004f00700065006e003500470053450990004e006500780074460a475210909160900a490100"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.683282 [PDCP    ] [D] ue=0 SRB1 DL: TX SDU. sdu_len=54
+2025-01-09T19:06:09.683289 [PDCP    ] [I] ue=0 SRB1 DL: TX PDU. type=data pdu_len=60 sn=5 count=5 is_retx=false
+2025-01-09T19:06:09.683290 [RRC     ] [D] ue=0 c-rnti=0x4601: TX 0 PDU
+2025-01-09T19:06:09.683298 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: DLRRCMessageTransfer
+2025-01-09T19:06:09.683305 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 89 bytes
+2025-01-09T19:06:09.683351 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "DL NAS Message Transfer Procedure" finalized
+2025-01-09T19:06:09.683355 [SCTP-GW ] [D] F1-C assoc=323321: Received 68 bytes
+2025-01-09T19:06:09.683414 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.683416 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.683418 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=39
+2025-01-09T19:06:09.683420 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=6 rx_deliv=6 rx_reord=0
+2025-01-09T19:06:09.683421 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=39 sn=6 count=6
+2025-01-09T19:06:09.683422 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=2. count=6 pdu_len=39
+2025-01-09T19:06:09.683426 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=6
+2025-01-09T19:06:09.683427 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=6 to window.
+2025-01-09T19:06:09.683427 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=6
+2025-01-09T19:06:09.683428 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=6 from window
+2025-01-09T19:06:09.683429 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=7 rx_deliv=7 rx_reord=0
+2025-01-09T19:06:09.683444 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL ulInformationTransfer (33 B)
+2025-01-09T19:06:09.683445 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized ulInformationTransfer: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "ulInformationTransfer": {
+            "criticalExtensions": {
+              "ulInformationTransfer": {
+                "dedicatedNAS-Message": "7e02b4a63ed0027e00670100082e0101c1ffff91a112018125040361706e"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.683457 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0 amf_ue=3: UplinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 46,
+    "criticality": "ignore",
+    "value": {
+      "UplinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e02b4a63ed0027e00670100082e0101c1ffff91a112018125040361706e",
+          "id": 121,
+          "criticality": "ignore",
+          {
+            "userLocationInformationNR": {
+              "nR-CGI": {
+                "pLMNIdentity": "00f110",
+                "nRCellIdentity": "000000000000011001101100000000000000"
+              },
+              "tAI": {
+                "pLMNIdentity": "00f110",
+                "tAC": "00004d"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.683466 [SCTP-GW ] [D] N2: Sending PDU of 73 bytes
+2025-01-09T19:06:09.694479 [SCTP-GW ] [D] N2: Received 155 bytes
+2025-01-09T19:06:09.694576 [NGAP    ] [I] Rx PDU ue=0 ran_ue=0 amf_ue=3: PDUSessionResourceSetupRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 29,
+    "criticality": "reject",
+    "value": {
+      "PDUSessionResourceSetupRequest": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 74,
+          "criticality": "reject",
+          "Value": [
+            {
+              "pDUSessionID": 1,
+              "pDUSessionNAS-PDU": "7e02d6e16162037e00680100302e0101c211000901000631310101ff010603f42403f4242905010a2d000422010179000601204101010925040361706e1201",
+              "s-NSSAI": {
+                "sST": "01"
+              },
+              "pDUSessionResourceSetupRequestTransfer": "0000040082000a0c3b9aca00303b9aca00008b000a01f07f0000070000f83a00860001000088000700010000091c00"
+            }
+          ],
+          "id": 110,
+          "criticality": "ignore",
+          {
+            "uEAggregateMaximumBitRateDL": 1000000000,
+            "uEAggregateMaximumBitRateUL": 1000000000
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.694740 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "PDU Session Resource Setup Procedure" initialized
+2025-01-09T19:06:09.694756 [CU-CP   ] [D] ue=0: "PDU Session Resource Setup Routine" initialized
+2025-01-09T19:06:09.694762 [CU-CP   ] [D] Allocated QFI=1 to DRB1 with 5QI=0x9
+2025-01-09T19:06:09.694812 [CU-CP-E1] [I] ue=0 cu_cp_ue=0: Created new E1AP UE context
+2025-01-09T19:06:09.694910 [CU-CP-E1] [D] ue=0 cu_cp_ue=0: "Bearer Context Setup Procedure" initialized
+2025-01-09T19:06:09.694916 [CU-CP-E1] [I] Tx PDU ue=0 cu_cp_ue=0: BearerContextSetupRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 8,
+    "criticality": "reject",
+    "value": {
+      "BearerContextSetupRequest": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 13,
+          "criticality": "reject",
+          {
+            "securityAlgorithm": {
+              "cipheringAlgorithm": "nEA0",
+              "integrityProtectionAlgorithm": "i-128-NIA2"
+            },
+            "uPSecuritykey": {
+              "encryptionKey": "bdd02a431fc826bfe054aeeea5429aed09f7bc12eadcdf2fcbf934967bc57e8d",
+              "integrityProtectionKey": "79991a0565fea7b6598768215a3d9eb7adc5742d17df26e92c515865fe266b17"
+            }
+          },
+          "id": 14,
+          "criticality": "reject",
+          "Value": 1000000000,
+          "id": 58,
+          "criticality": "ignore",
+          "Value": "00f110",
+          "id": 23,
+          "criticality": "reject",
+          "Value": "ue",
+          "id": 59,
+          "criticality": "reject",
+          "Value": 120,
+          "id": 15,
+          "criticality": "reject",
+          {
+            "nG-RAN-BearerContextSetupRequest": 
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.694965 [CU-UP-E1] [I] Rx PDU cu_cp_ue=0: BearerContextSetupRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 8,
+    "criticality": "reject",
+    "value": {
+      "BearerContextSetupRequest": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 13,
+          "criticality": "reject",
+          {
+            "securityAlgorithm": {
+              "cipheringAlgorithm": "nEA0",
+              "integrityProtectionAlgorithm": "i-128-NIA2"
+            },
+            "uPSecuritykey": {
+              "encryptionKey": "bdd02a431fc826bfe054aeeea5429aed09f7bc12eadcdf2fcbf934967bc57e8d",
+              "integrityProtectionKey": "79991a0565fea7b6598768215a3d9eb7adc5742d17df26e92c515865fe266b17"
+            }
+          },
+          "id": 14,
+          "criticality": "reject",
+          "Value": 1000000000,
+          "id": 58,
+          "criticality": "ignore",
+          "Value": "00f110",
+          "id": 23,
+          "criticality": "reject",
+          "Value": "ue",
+          "id": 59,
+          "criticality": "reject",
+          "Value": 120,
+          "id": 15,
+          "criticality": "reject",
+          {
+            "nG-RAN-BearerContextSetupRequest": 
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.694970 [CU-UP-E1] [D] Received BearerContextSetupRequest (plmn=00101)
+2025-01-09T19:06:09.695022 [CU-UP   ] [I] ue=0: UE created
+2025-01-09T19:06:09.695036 [CU-UP   ] [D] ue=0: PDU session uplink tunnel info: psi=1 local_teid=0x000001 peer_teid=63546 peer_addr=127.0.0.7
+2025-01-09T19:06:09.695460 [GTPU    ] [I] ue=0 DL teid=0x000001: GTPU NGU Rx configured. local_teid=0x000001 t_reodering=0 test_mode=false
+2025-01-09T19:06:09.695464 [GTPU    ] [I] ue=0 UL teid=0x00f83a: GTPU NGU Tx configured. peer_teid=0x00f83a peer_addr=127.0.0.7 peer_port=2152
+2025-01-09T19:06:09.695465 [GTPU    ] [I] Tunnel added. teid=0x000001
+2025-01-09T19:06:09.695486 [CU-UP   ] [D] ue=0: Created QoS flow with QFI=1 and 5QI=0x9
+2025-01-09T19:06:09.695487 [SDAP    ] [I] ue=0 psi=1: Mapping QFI=1 DRB1 default_drb=true hdr_ul=absent hdr_dl=absent
+2025-01-09T19:06:09.697879 [PDCP    ] [I] ue=0 DRB1 DL: PDCP configured. rb_type=DRB rlc_mode=AM sn_size=18 discard_timer=infinity count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false
+2025-01-09T19:06:09.699704 [PDCP    ] [I] ue=0 DRB1 UL: PDCP configured. rb_type=DRB rlc_mode=AM sn_size=18 t_reordering=220 count_notify=3221225472 count_max=4294967294
+2025-01-09T19:06:09.699707 [PDCP    ] [I] ue=0 DRB1 DL: Security configured: NIA2 (off) NEA0 (on) domain=UP
+2025-01-09T19:06:09.699707 [PDCP    ] [I] ue=0 DRB1 DL: 128 K_int: 
+	ad c5 74 2d 17 df 26 e9 2c 51 58 65 fe 26 6b 17
+2025-01-09T19:06:09.699707 [PDCP    ] [I] ue=0 DRB1 DL: 128 K_enc: 
+	09 f7 bc 12 ea dc df 2f cb f9 34 96 7b c5 7e 8d
+2025-01-09T19:06:09.699709 [PDCP    ] [I] ue=0 DRB1 UL: Security configured: NIA2 (off) NEA0 (on) domain=UP
+2025-01-09T19:06:09.699710 [PDCP    ] [I] ue=0 DRB1 UL: 128 K_int: 
+	ad c5 74 2d 17 df 26 e9 2c 51 58 65 fe 26 6b 17
+2025-01-09T19:06:09.699710 [PDCP    ] [I] ue=0 DRB1 UL: 128 K_enc: 
+	09 f7 bc 12 ea dc df 2f cb f9 34 96 7b c5 7e 8d
+2025-01-09T19:06:09.699710 [PDCP    ] [D] No E1AP handler for PDCP Tx control events. All events will be ignored.
+2025-01-09T19:06:09.699711 [PDCP    ] [D] No E1AP handler for PDCP Rx control events. All events will be ignored.
+2025-01-09T19:06:09.699717 [UDP-GW  ] [D] Read bind port of UDP network gateway: 127.0.0.88
+2025-01-09T19:06:09.699748 [CU-F1-U ] [I] Creating CU gateway local bearer with UL GTP Tunnel={Addr=127.0.0.88 TEID=0x000001}
+2025-01-09T19:06:09.699760 [GTPU    ] [I] ue=0 RX teid=0x000001: GTPU NR-U Rx configured. node=cu_up local_teid=0x000001
+2025-01-09T19:06:09.699761 [GTPU    ] [I] Tunnel added. teid=0x000001
+2025-01-09T19:06:09.699799 [CU-UP-E1] [D] ue=0 cu_up_ue_e1ap_id=0 cu_cp_ue_e1ap_id=0: Adding E1AP UE context
+2025-01-09T19:06:09.699804 [CU-UP-E1] [D] ue=0 cu_up_ue_e1ap_id=0 cu_cp_ue_e1ap_id=0: Added UE context
+2025-01-09T19:06:09.699825 [CU-UP-E1] [I] Tx PDU ue=0 cu_cp_ue=0 cu_up_ue=0: BearerContextSetupResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 8,
+    "criticality": "reject",
+    "value": {
+      "BearerContextSetupResponse": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 3,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 16,
+          "criticality": "ignore",
+          {
+            "nG-RAN-BearerContextSetupResponse": {
+              "id": 46,
+              "criticality": "ignore",
+              "Value": [
+                {
+                  "pDU-Session-ID": 1,
+                  "nG-DL-UP-TNL-Information": {
+                    "gTPTunnel": {
+                      "transportLayerAddress": "01111111000000000000000001010111",
+                      "gTP-TEID": "00000001"
+                    }
+                  },
+                  "dRB-Setup-List-NG-RAN": [
+                    {
+                      "dRB-ID": 1,
+                      "uL-UP-Transport-Parameters": [
+                        {
+                          "uP-TNL-Information": {
+                            "gTPTunnel": {
+                              "transportLayerAddress": "01111111000000000000000001011000",
+                              "gTP-TEID": "00000001"
+                            }
+                          },
+                          "cell-Group-ID": 0
+                        }
+                      ],
+                      "flow-Setup-List": [
+                        {
+                          "qoS-Flow-Identifier": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.699841 [CU-CP-E1] [I] Rx PDU ue=0 cu_cp_ue=0 cu_up_ue=0: BearerContextSetupResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 8,
+    "criticality": "reject",
+    "value": {
+      "BearerContextSetupResponse": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 3,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 16,
+          "criticality": "ignore",
+          {
+            "nG-RAN-BearerContextSetupResponse": {
+              "id": 46,
+              "criticality": "ignore",
+              "Value": [
+                {
+                  "pDU-Session-ID": 1,
+                  "nG-DL-UP-TNL-Information": {
+                    "gTPTunnel": {
+                      "transportLayerAddress": "01111111000000000000000001010111",
+                      "gTP-TEID": "00000001"
+                    }
+                  },
+                  "dRB-Setup-List-NG-RAN": [
+                    {
+                      "dRB-ID": 1,
+                      "uL-UP-Transport-Parameters": [
+                        {
+                          "uP-TNL-Information": {
+                            "gTPTunnel": {
+                              "transportLayerAddress": "01111111000000000000000001011000",
+                              "gTP-TEID": "00000001"
+                            }
+                          },
+                          "cell-Group-ID": 0
+                        }
+                      ],
+                      "flow-Setup-List": [
+                        {
+                          "qoS-Flow-Identifier": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.699847 [CU-CP-E1] [D] ue=0 cu_cp_ue=0 cu_up_ue=0: Updated CU-UP-E1AP-ID
+2025-01-09T19:06:09.699899 [CU-CP-E1] [D] ue=0 cu_cp_ue=0 cu_up_ue=0: "Bearer Context Setup Procedure" finalized
+2025-01-09T19:06:09.699934 [CU-CP-F1] [D] ue=0 du_ue=0 cu_ue=0 proc="UE Context Modification Procedure": Procedure started...
+2025-01-09T19:06:09.699984 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: UEContextModificationRequest
+2025-01-09T19:06:09.700013 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 106 bytes
+2025-01-09T19:06:09.710528 [UDP-GW  ] [D] Received 20 bytes on UDP socket. Pool occupancy 0.03%
+2025-01-09T19:06:09.710581 [GTPU    ] [D] Forwarding PDU. pdu_len=20 teid=0x000001
+2025-01-09T19:06:09.710584 [GTPU    ] [D] ue=0 RX teid=0x000001: RX PDU. pdu_len=20
+2025-01-09T19:06:09.710586 [GTPU    ] [I] ue=0 RX teid=0x000001: RX DL data delivery status
+2025-01-09T19:06:09.710592 [CU-F1-U ] [D] ue=0 DRB1 ul-teid=0x000001: F1-U bearer received PDU
+2025-01-09T19:06:09.711622 [SCTP-GW ] [D] F1-C assoc=323321: Received 82 bytes
+2025-01-09T19:06:09.711804 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: UEContextModificationResponse
+2025-01-09T19:06:09.711814 [CU-CP-F1] [I] ue=0 du_ue=0 cu_ue=0 proc="UE Context Modification Procedure": Procedure finished successfully
+2025-01-09T19:06:09.711982 [CU-CP-E1] [D] ue=0 cu_cp_ue=0 cu_up_ue=0: "Bearer Context Modification Procedure" initialized
+2025-01-09T19:06:09.711988 [CU-CP-E1] [I] Tx PDU ue=0 cu_cp_ue=0 cu_up_ue=0: BearerContextModificationRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 9,
+    "criticality": "reject",
+    "value": {
+      "BearerContextModificationRequest": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 3,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 18,
+          "criticality": "reject",
+          {
+            "nG-RAN-BearerContextModificationRequest": {
+              "id": 43,
+              "criticality": "reject",
+              "Value": [
+                {
+                  "pDU-Session-ID": 1,
+                  "dRB-To-Modify-List-NG-RAN": [
+                    {
+                      "dRB-ID": 1,
+                      "dL-UP-Parameters": [
+                        {
+                          "uP-TNL-Information": {
+                            "gTPTunnel": {
+                              "transportLayerAddress": "01111111000000000000101000000010",
+                              "gTP-TEID": "00000001"
+                            }
+                          },
+                          "cell-Group-ID": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.712023 [CU-UP-E1] [I] Rx PDU ue=0 cu_cp_ue=0 cu_up_ue=0: BearerContextModificationRequest
+{
+  "initiatingMessage": {
+    "procedureCode": 9,
+    "criticality": "reject",
+    "value": {
+      "BearerContextModificationRequest": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 3,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 18,
+          "criticality": "reject",
+          {
+            "nG-RAN-BearerContextModificationRequest": {
+              "id": 43,
+              "criticality": "reject",
+              "Value": [
+                {
+                  "pDU-Session-ID": 1,
+                  "dRB-To-Modify-List-NG-RAN": [
+                    {
+                      "dRB-ID": 1,
+                      "dL-UP-Parameters": [
+                        {
+                          "uP-TNL-Information": {
+                            "gTPTunnel": {
+                              "transportLayerAddress": "01111111000000000000101000000010",
+                              "gTP-TEID": "00000001"
+                            }
+                          },
+                          "cell-Group-ID": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.712189 [CU-UP   ] [D] ue=0: Handling BearerContextModificationRequest
+2025-01-09T19:06:09.712190 [CU-UP   ] [D] ue=0: Modifying psi=1
+2025-01-09T19:06:09.712200 [CU-UP   ] [I] ue=0: Attaching dl_teid={Addr=127.0.10.2 TEID=0x000001} to F1-U tunnel with ul_teid=0x000001
+2025-01-09T19:06:09.712229 [GTPU    ] [I] ue=0 TX teid=0x000001: GTPU NR-U Tx configured. peer_teid=0x000001 peer_addr=127.0.10.2 peer_port=2152
+2025-01-09T19:06:09.712231 [CU-F1-U ] [I] Connected CU bearer to DU bearer. UL GTP Tunnel={Addr=127.0.0.88 TEID=0x000001}, DL GTP Tunnel={Addr=127.0.10.2 TEID=0x000001}
+2025-01-09T19:06:09.712232 [CU-UP   ] [I] ue=0: Modified DRB1. psi=1 f1u_teid=0x000001
+2025-01-09T19:06:09.712233 [CU-UP   ] [D] Adding DRB modified result item. DRB1, success=true
+2025-01-09T19:06:09.712251 [CU-UP   ] [D] ue=0: Modification successful
+2025-01-09T19:06:09.712264 [CU-UP-E1] [D] ue=0 cu_up_ue_e1ap_id=0 cu_cp_ue_e1ap_id=0: Sending BearerContextModificationResponse
+2025-01-09T19:06:09.712268 [CU-UP-E1] [I] Tx PDU ue=0 cu_cp_ue=0 cu_up_ue=0: BearerContextModificationResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 9,
+    "criticality": "reject",
+    "value": {
+      "BearerContextModificationResponse": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 3,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 19,
+          "criticality": "ignore",
+          {
+            "nG-RAN-BearerContextModificationResponse": {
+              "id": 48,
+              "criticality": "reject",
+              "Value": [
+                {
+                  "pDU-Session-ID": 1,
+                  "dRB-Modified-List-NG-RAN": [
+                    {
+                      "dRB-ID": 1,
+                      "uL-UP-Transport-Parameters": [
+                        {
+                          "uP-TNL-Information": {
+                            "gTPTunnel": {
+                              "transportLayerAddress": "00000000000000000000000000000000",
+                              "gTP-TEID": "00000000"
+                            }
+                          },
+                          "cell-Group-ID": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.712295 [CU-CP-E1] [I] Rx PDU ue=0 cu_cp_ue=0 cu_up_ue=0: BearerContextModificationResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 9,
+    "criticality": "reject",
+    "value": {
+      "BearerContextModificationResponse": {
+        "protocolIEs": {
+          "id": 2,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 3,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 19,
+          "criticality": "ignore",
+          {
+            "nG-RAN-BearerContextModificationResponse": {
+              "id": 48,
+              "criticality": "reject",
+              "Value": [
+                {
+                  "pDU-Session-ID": 1,
+                  "dRB-Modified-List-NG-RAN": [
+                    {
+                      "dRB-ID": 1,
+                      "uL-UP-Transport-Parameters": [
+                        {
+                          "uP-TNL-Information": {
+                            "gTPTunnel": {
+                              "transportLayerAddress": "00000000000000000000000000000000",
+                              "gTP-TEID": "00000000"
+                            }
+                          },
+                          "cell-Group-ID": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.712322 [CU-CP-E1] [D] ue=0 cu_cp_ue=0 cu_up_ue=0: "Bearer Context Modification Procedure" finalized
+2025-01-09T19:06:09.712335 [CU-CP   ] [D] ue=0: No neighbor cells configured and periodic serving cell reports disabled for nci=0x66c000
+2025-01-09T19:06:09.712372 [CU-CP   ] [D] Containerized cellGroupCfg: {
+  "cellGroupId": 0,
+  "rlc-BearerToAddModList": [
+    {
+      "logicalChannelIdentity": 2,
+      "servedRadioBearer": {
+        "srb-Identity": 2
+      },
+      "rlc-Config": {
+        "am": {
+          "ul-AM-RLC": {
+            "sn-FieldLength": "size12",
+            "t-PollRetransmit": "ms45",
+            "pollPDU": "infinity",
+            "pollByte": "infinity",
+            "maxRetxThreshold": "t8"
+          },
+          "dl-AM-RLC": {
+            "sn-FieldLength": "size12",
+            "t-Reassembly": "ms35",
+            "t-StatusProhibit": "ms0"
+          }
+        }
+      },
+      "mac-LogicalChannelConfig": {
+        "ul-SpecificParameters": {
+          "priority": 3,
+          "prioritisedBitRate": "infinity",
+          "bucketSizeDuration": "ms5",
+          "logicalChannelGroup": 0,
+          "schedulingRequestID": 0,
+          "logicalChannelSR-Mask": false,
+          "logicalChannelSR-DelayTimerApplied": false
+        }
+      }
+    },
+    {
+      "logicalChannelIdentity": 4,
+      "servedRadioBearer": {
+        "drb-Identity": 1
+      },
+      "rlc-Config": {
+        "am": {
+          "ul-AM-RLC": {
+            "sn-FieldLength": "size18",
+            "t-PollRetransmit": "ms20",
+            "pollPDU": "p16",
+            "pollByte": "infinity",
+            "maxRetxThreshold": "t32"
+          },
+          "dl-AM-RLC": {
+            "sn-FieldLength": "size18",
+            "t-Reassembly": "ms20",
+            "t-StatusProhibit": "ms10"
+          }
+        }
+      },
+      "mac-LogicalChannelConfig": {
+        "ul-SpecificParameters": {
+          "priority": 5,
+          "prioritisedBitRate": "kBps8",
+          "bucketSizeDuration": "ms300",
+          "logicalChannelGroup": 2,
+          "schedulingRequestID": 0,
+          "logicalChannelSR-Mask": false,
+          "logicalChannelSR-DelayTimerApplied": false
+        }
+      }
+    }
+  ],
+  "mac-CellGroupConfig": {
+    "bsr-Config": {
+      "periodicBSR-Timer": "sf10",
+      "retxBSR-Timer": "sf80"
+    },
+    "skipUplinkTxDynamic": false
+  },
+  "physicalCellGroupConfig": {
+    "pdsch-HARQ-ACK-Codebook": "dynamic"
+  }
+}
+2025-01-09T19:06:09.712389 [RRC     ] [D] ue=0 c-rnti=0x4601: "RRC Reconfiguration Procedure" initialized
+2025-01-09T19:06:09.712392 [RRC     ] [D] ue=0 c-rnti=0x4601: Creating SRB2
+2025-01-09T19:06:09.712438 [PDCP    ] [I] ue=0 SRB2 DL: PDCP configured. rb_type=SRB rlc_mode=AM sn_size=12 discard_timer={na} count_notify=3221225472 count_max=4294967294 warn_on_drop=false test_mode=false
+2025-01-09T19:06:09.712478 [PDCP    ] [I] ue=0 SRB2 UL: PDCP configured. rb_type=SRB rlc_mode=AM sn_size=12 t_reordering=infinity count_notify=3221225472 count_max=4294967294
+2025-01-09T19:06:09.712485 [PDCP    ] [I] ue=0 SRB2 DL: Security configured: NIA2 (on) NEA0 (on) domain=RRC
+2025-01-09T19:06:09.712485 [PDCP    ] [I] ue=0 SRB2 DL: 128 K_int: 
+	7a 9f 93 89 27 c3 d2 d1 f2 25 11 cd fa ea 3d b6
+2025-01-09T19:06:09.712486 [PDCP    ] [I] ue=0 SRB2 DL: 128 K_enc: 
+	33 4a 92 30 8a 0e f3 2f df 71 8f 56 98 7b d5 eb
+2025-01-09T19:06:09.712502 [PDCP    ] [I] ue=0 SRB2 UL: Security configured: NIA2 (on) NEA0 (on) domain=RRC
+2025-01-09T19:06:09.712503 [PDCP    ] [I] ue=0 SRB2 UL: 128 K_int: 
+	7a 9f 93 89 27 c3 d2 d1 f2 25 11 cd fa ea 3d b6
+2025-01-09T19:06:09.712503 [PDCP    ] [I] ue=0 SRB2 UL: 128 K_enc: 
+	33 4a 92 30 8a 0e f3 2f df 71 8f 56 98 7b d5 eb
+2025-01-09T19:06:09.712554 [RRC     ] [D] ue=0 c-rnti=0x4601: Tx DCCH DL rrcReconfiguration (105 B)
+2025-01-09T19:06:09.712555 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized rrcReconfiguration: [
+  {
+    "DL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "rrcReconfiguration": {
+            "rrc-TransactionIdentifier": 3,
+            "criticalExtensions": {
+              "rrcReconfiguration": {
+                "radioBearerConfig": {
+                  "srb-ToAddModList": [
+                    {
+                      "srb-Identity": 2
+                    }
+                  ],
+                  "drb-ToAddModList": [
+                    {
+                      "cnAssociation": {
+                        "sdap-Config": {
+                          "pdu-Session": 1,
+                          "sdap-HeaderDL": "absent",
+                          "sdap-HeaderUL": "absent",
+                          "defaultDRB": true,
+                          "mappedQoS-FlowsToAdd": [
+                            1
+                          ]
+                        }
+                      },
+                      "drb-Identity": 1,
+                      "pdcp-Config": {
+                        "drb": {
+                          "discardTimer": "infinity",
+                          "pdcp-SN-SizeUL": "len18bits",
+                          "pdcp-SN-SizeDL": "len18bits",
+                          "headerCompression": {
+                          }
+                        },
+                        "t-Reordering": "ms220"
+                      }
+                    }
+                  ]
+                },
+                "nonCriticalExtension": {
+                  "masterCellGroup": "5802b091117aec701065e000b1c030c55fc8120d05900408c008",
+                  "dedicatedNAS-MessageList": [
+                    "7e02d6e16162037e00680100302e0101c211000901000631310101ff010603f42403f4242905010a2d000422010179000601204101010925040361706e1201"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.712557 [PDCP    ] [D] ue=0 SRB1 DL: TX SDU. sdu_len=105
+2025-01-09T19:06:09.712560 [PDCP    ] [I] ue=0 SRB1 DL: TX PDU. type=data pdu_len=111 sn=6 count=6 is_retx=false
+2025-01-09T19:06:09.712561 [RRC     ] [D] ue=0 c-rnti=0x4601: TX 0 PDU
+2025-01-09T19:06:09.712568 [CU-CP-F1] [I] Tx PDU du=0 ue=0 cu_ue=0 du_ue=0: DLRRCMessageTransfer
+2025-01-09T19:06:09.712581 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 141 bytes
+2025-01-09T19:06:09.720464 [SCTP-GW ] [D] F1-C assoc=323321: Received 48 bytes
+2025-01-09T19:06:09.720525 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.720529 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.720532 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=19
+2025-01-09T19:06:09.720534 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=7 rx_deliv=7 rx_reord=0
+2025-01-09T19:06:09.720535 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=19 sn=7 count=7
+2025-01-09T19:06:09.720536 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=3. count=7 pdu_len=19
+2025-01-09T19:06:09.720541 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=7
+2025-01-09T19:06:09.720543 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=7 to window.
+2025-01-09T19:06:09.720543 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=7
+2025-01-09T19:06:09.720545 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=7 from window
+2025-01-09T19:06:09.720546 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=8 rx_deliv=8 rx_reord=0
+2025-01-09T19:06:09.720571 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL ulInformationTransfer (13 B)
+2025-01-09T19:06:09.720573 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized ulInformationTransfer: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "ulInformationTransfer": {
+            "criticalExtensions": {
+              "ulInformationTransfer": {
+                "dedicatedNAS-Message": "7e02d8970c0e037e0055"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.922182 [SCTP-GW ] [D] F1-C assoc=323321: Received 37 bytes
+2025-01-09T19:06:09.922234 [CU-CP-F1] [I] Rx PDU du=0 ue=0 cu_ue=0 du_ue=0: ULRRCMessageTransfer
+2025-01-09T19:06:09.922238 [RRC     ] [D] ue=0 c-rnti=0x4601: RX SRB1 PDCP PDU
+2025-01-09T19:06:09.922242 [PDCP    ] [D] ue=0 SRB1 UL: RX PDU. pdu_len=8
+2025-01-09T19:06:09.922243 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=8 rx_deliv=8 rx_reord=0
+2025-01-09T19:06:09.922244 [PDCP    ] [I] ue=0 SRB1 UL: RX PDU. type=data pdu_len=8 sn=8 count=8
+2025-01-09T19:06:09.922246 [PDCP    ] [D] ue=0 SRB1 UL: Using sec_engine with worker_idx=1. count=8 pdu_len=8
+2025-01-09T19:06:09.922252 [PDCP    ] [D] ue=0 SRB1 UL: Security passed. count=8
+2025-01-09T19:06:09.922253 [PDCP    ] [D] ue=0 SRB1 UL: Adding sn=8 to window.
+2025-01-09T19:06:09.922253 [PDCP    ] [I] ue=0 SRB1 UL: RX SDU. count=8
+2025-01-09T19:06:09.922255 [PDCP    ] [D] ue=0 SRB1 UL: Removing sn=8 from window
+2025-01-09T19:06:09.922255 [PDCP    ] [D] ue=0 SRB1 UL: RX entity state. rx_next=9 rx_deliv=9 rx_reord=0
+2025-01-09T19:06:09.922276 [RRC     ] [D] ue=0 c-rnti=0x4601: Rx SRB1 DCCH UL rrcReconfigurationComplete (2 B)
+2025-01-09T19:06:09.922278 [RRC     ] [D] ue=0 c-rnti=0x4601: Containerized rrcReconfigurationComplete: [
+  {
+    "UL-DCCH-Message": {
+      "message": {
+        "c1": {
+          "rrcReconfigurationComplete": {
+            "rrc-TransactionIdentifier": 3,
+            "criticalExtensions": {
+              "rrcReconfigurationComplete": {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+2025-01-09T19:06:09.922285 [RRC     ] [D] ue=0 c-rnti=0x4601: "RRC Reconfiguration Procedure" finished successfully
+2025-01-09T19:06:09.922289 [CU-CP   ] [D] ue=0: "PDU Session Resource Setup Routine" finalized
+2025-01-09T19:06:09.922334 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0 amf_ue=3: PDUSessionResourceSetupResponse
+{
+  "successfulOutcome": {
+    "procedureCode": 29,
+    "criticality": "reject",
+    "value": {
+      "PDUSessionResourceSetupResponse": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "ignore",
+          "Value": 3,
+          "id": 85,
+          "criticality": "ignore",
+          "Value": 0,
+          "id": 75,
+          "criticality": "ignore",
+          "Value": [
+            {
+              "pDUSessionID": 1,
+              "pDUSessionResourceSetupResponseTransfer": "0003e07f000057000000010001"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.922341 [SCTP-GW ] [D] N2: Sending PDU of 40 bytes
+2025-01-09T19:06:09.922381 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: "PDU Session Resource Setup Procedure" finalized
+2025-01-09T19:06:09.922389 [NGAP    ] [I] Tx PDU ue=0 ran_ue=0 amf_ue=3: UplinkNASTransport
+{
+  "initiatingMessage": {
+    "procedureCode": 46,
+    "criticality": "ignore",
+    "value": {
+      "UplinkNASTransport": {
+        "protocolIEs": {
+          "id": 10,
+          "criticality": "reject",
+          "Value": 3,
+          "id": 85,
+          "criticality": "reject",
+          "Value": 0,
+          "id": 38,
+          "criticality": "reject",
+          "Value": "7e02d8970c0e037e0055",
+          "id": 121,
+          "criticality": "ignore",
+          {
+            "userLocationInformationNR": {
+              "nR-CGI": {
+                "pLMNIdentity": "00f110",
+                "nRCellIdentity": "000000000000011001101100000000000000"
+              },
+              "tAI": {
+                "pLMNIdentity": "00f110",
+                "tAC": "00004d"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+2025-01-09T19:06:09.922394 [SCTP-GW ] [D] N2: Sending PDU of 53 bytes
+2025-01-09T19:06:10.290368 [CU-CP   ] [D] num_f1ap_ues=1 num_rrc_ues=1 num_ngap_ues=1 num_e1ap_ues=1 num_cu_cp_ues=1
+2025-01-09T19:06:10.304404 [CU-UP   ] [D] num_e1ap_ues=1 num_cu_up_ues=1
+2025-01-09T19:06:11.290382 [CU-CP   ] [D] num_f1ap_ues=1 num_rrc_ues=1 num_ngap_ues=1 num_e1ap_ues=1 num_cu_cp_ues=1
+2025-01-09T19:06:11.304360 [CU-UP   ] [D] num_e1ap_ues=1 num_cu_up_ues=1
+2025-01-09T19:06:12.290370 [CU-CP   ] [D] num_f1ap_ues=1 num_rrc_ues=1 num_ngap_ues=1 num_e1ap_ues=1 num_cu_cp_ues=1
+2025-01-09T19:06:12.304393 [CU-UP   ] [D] num_e1ap_ues=1 num_cu_up_ues=1
+2025-01-09T19:06:13.290323 [CU-CP   ] [D] num_f1ap_ues=1 num_rrc_ues=1 num_ngap_ues=1 num_e1ap_ues=1 num_cu_cp_ues=1
+2025-01-09T19:06:13.304396 [CU-UP   ] [D] num_e1ap_ues=1 num_cu_up_ues=1
+2025-01-09T19:06:14.290373 [CU-CP   ] [D] num_f1ap_ues=1 num_rrc_ues=1 num_ngap_ues=1 num_e1ap_ues=1 num_cu_cp_ues=1
+2025-01-09T19:06:14.304339 [CU-UP   ] [D] num_e1ap_ues=1 num_cu_up_ues=1
+2025-01-09T19:06:15.126055 [SCTP-GW ] [D] F1-C assoc=323321: Received 13 bytes
+2025-01-09T19:06:15.126102 [CU-CP-F1] [I] Rx PDU du=0 tid=2: F1RemovalRequest
+2025-01-09T19:06:15.126106 [CU-CP-F1] [I] F1 Removal: F1 Removal Request received, but there are still UEs connected to the DU. Resetting 1 UEs.
+2025-01-09T19:06:15.126110 [CU-UEMNG] [D] ue=0: Clearing pending tasks
+2025-01-09T19:06:15.126112 [CU-UEMNG] [D] ue=0: Scheduling async task
+2025-01-09T19:06:15.126118 [CU-CP   ] [D] ue=0: "UE Removal Routine" initialized
+2025-01-09T19:06:15.126128 [PDCP    ] [D] ue=0 SRB2 DL: Stopped PDCP entity
+2025-01-09T19:06:15.126129 [PDCP    ] [D] ue=0 SRB2 UL: Stopped PDCP entity
+2025-01-09T19:06:15.126220 [PDCP    ] [D] ue=0 SRB1 DL: Stopped PDCP entity
+2025-01-09T19:06:15.126220 [PDCP    ] [D] ue=0 SRB1 UL: Stopped PDCP entity
+2025-01-09T19:06:15.126234 [CU-CP-E1] [D] ue=0 cu_cp_ue=0 cu_up_ue=0: Removed E1AP UE context
+2025-01-09T19:06:15.126236 [CU-CP-F1] [D] ue=0 cu_ue=0: Removing F1AP UE context
+2025-01-09T19:06:15.126239 [NGAP    ] [D] ue=0 ran_ue=0 amf_ue=3: Removing NGAP UE context
+2025-01-09T19:06:15.126244 [CU-UEMNG] [D] ue=0: Removed
+2025-01-09T19:06:15.126244 [CU-CP   ] [I] ue=0: "UE Removal Routine" finalized
+2025-01-09T19:06:15.126249 [CU-CP-F1] [I] Tx PDU du=0 tid=2: F1RemovalResponse
+2025-01-09T19:06:15.135030 [SCTP-GW ] [D] F1-C assoc=323321: Sending PDU of 13 bytes
+2025-01-09T19:06:15.135162 [SCTP-GW ] [D] F1-C: Rx SCTP_SHUTDOWN_EVENT: assoc=323321
+2025-01-09T19:06:15.135164 [SCTP-GW ] [I] F1-C assoc=323321: SCTP association was shut down (client_addr=127.0.0.87:54800). Cause: Client requested the shutdown
+2025-01-09T19:06:15.135167 [SCTP-GW ] [D] F1-C: Rx SCTP_ASSOC_CHANGE: state=SCTP_SHUTDOWN_COMP error=0 outbound_streams=0 inbound_streams=0 assoc=323321
+2025-01-09T19:06:15.135181 [CU-CP   ] [D] Removing DU 0...
+2025-01-09T19:06:15.135209 [CU-CP   ] [I] Removed DU 0
+2025-01-09T19:06:15.290342 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:15.304335 [CU-UP   ] [D] num_e1ap_ues=1 num_cu_up_ues=1
+2025-01-09T19:06:16.290333 [CU-CP   ] [D] num_f1ap_ues=0 num_rrc_ues=0 num_ngap_ues=0 num_e1ap_ues=0 num_cu_cp_ues=0
+2025-01-09T19:06:16.304318 [CU-UP   ] [D] num_e1ap_ues=1 num_cu_up_ues=1
+2025-01-09T19:06:16.307999 [CU-UP   ] [D] CU-UP stopping...
+2025-01-09T19:06:16.318058 [IO-EPOLL] [D] fd=14: Deregistering file descriptor...
+2025-01-09T19:06:16.318076 [IO-EPOLL] [D] fd=14: File descriptor deregistered from epoll interest list
+2025-01-09T19:06:16.318085 [IO-EPOLL] [I] fd=14: Deregistered file descriptor successfully
+2025-01-09T19:06:16.318123 [CU-UP   ] [I] CU-UP stopped successfully
+2025-01-09T19:06:16.318126 [CU-CP   ] [I] Stopping CU-CP...
+2025-01-09T19:06:16.318256 [CU-CP   ] [D] Removing CU-UP 0...
+2025-01-09T19:06:16.318258 [CU-CP   ] [I] Removed CU-UP 0
+2025-01-09T19:06:16.318469 [SCTP-GW ] [D] N2: Sent EOF to SCTP client and closed SCTP association
+2025-01-09T19:06:16.318482 [SCTP-GW ] [D] N2: Rx SCTP_ASSOC_CHANGE: state=SCTP_SHUTDOWN_COMP error=0 outbound_streams=0 inbound_streams=0 assoc=323318
+2025-01-09T19:06:16.318487 [IO-EPOLL] [D] fd=13: Deregistering file descriptor...
+2025-01-09T19:06:16.318492 [IO-EPOLL] [D] fd=13: File descriptor deregistered from epoll interest list
+2025-01-09T19:06:16.318577 [CU-CP   ] [I] CU-CP stopped successfully.
+2025-01-09T19:06:16.318577 [CU      ] [I] Closing PCAP files...
+2025-01-09T19:06:16.318579 [ALL     ] [D] Scheduling the closing of the "NGAP" pcap writer
+2025-01-09T19:06:16.318632 [ALL     ] [D] Saving PCAP (DLT=152) to "/tmp/cu_ngap.pcap"
+2025-01-09T19:06:16.318749 [ALL     ] [I] PCAP (DLT=152) successfully written to "/tmp/cu_ngap.pcap" and closed.
+2025-01-09T19:06:16.318765 [ALL     ] [D] Scheduling the closing of the "F1AP" pcap writer
+2025-01-09T19:06:16.318884 [ALL     ] [D] Saving PCAP (DLT=154) to "/tmp/gnb_f1ap.pcap"
+2025-01-09T19:06:16.318955 [ALL     ] [I] PCAP (DLT=154) successfully written to "/tmp/gnb_f1ap.pcap" and closed.
+2025-01-09T19:06:16.318965 [CU      ] [I] PCAP files successfully closed.
+2025-01-09T19:06:16.318965 [CU      ] [I] Stopping executors...
+2025-01-09T19:06:16.319132 [ALL     ] [I] Task worker "non_rt_pool#0" finished.
+2025-01-09T19:06:16.319134 [ALL     ] [I] Task worker "non_rt_pool#1" finished.
+2025-01-09T19:06:16.319134 [ALL     ] [I] Task worker "non_rt_pool#2" finished.
+2025-01-09T19:06:16.319156 [ALL     ] [I] Task worker "non_rt_pool#3" finished.
+2025-01-09T19:06:16.319157 [CU      ] [I] Executors closed successfully.
+2025-01-09T19:06:16.319386 [GTPU    ] [I] Tunnel removed. teid=0x000001
+2025-01-09T19:06:16.319920 [PDCP    ] [D] ue=0 DRB1 DL: Stopped PDCP entity
+2025-01-09T19:06:16.319921 [PDCP    ] [D] ue=0 DRB1 UL: Stopped PDCP entity
+2025-01-09T19:06:16.319932 [GTPU    ] [I] Tunnel removed. teid=0x000001
+2025-01-09T19:06:16.319939 [CU-F1-U ] [D] Removed CU F1-U bearer with UL GTP Tunnel={Addr=127.0.0.88 TEID=0x000001}.
+2025-01-09T19:06:16.321219 [IO-EPOLL] [D] fd=0: Deregistering file descriptor...
+2025-01-09T19:06:16.321237 [IO-EPOLL] [D] fd=0: File descriptor deregistered from epoll interest list
+2025-01-09T19:06:16.321244 [IO-EPOLL] [I] fd=0: Deregistered file descriptor successfully
+2025-01-09T19:06:16.321836 [SCTP-GW ] [D] N2: Closing...
+2025-01-09T19:06:16.321846 [SCTP-GW ] [I] N2: SCTP socket closed
+2025-01-09T19:06:16.321847 [SCTP-GW ] [D] E2AP: Closing...
+2025-01-09T19:06:16.321849 [SCTP-GW ] [I] E2AP: SCTP socket closed
+2025-01-09T19:06:16.321850 [SCTP-GW ] [D] E2AP: Closing...
+2025-01-09T19:06:16.321852 [SCTP-GW ] [I] E2AP: SCTP socket closed
+2025-01-09T19:06:16.321852 [IO-EPOLL] [D] fd=10: Deregistering file descriptor...
+2025-01-09T19:06:16.321861 [IO-EPOLL] [D] fd=10: File descriptor deregistered from epoll interest list
+2025-01-09T19:06:16.321865 [IO-EPOLL] [I] fd=10: Deregistered file descriptor successfully
+2025-01-09T19:06:16.322049 [IO-EPOLL] [D] fd=9: Deregistering file descriptor...
+2025-01-09T19:06:16.322057 [IO-EPOLL] [D] fd=9: File descriptor deregistered from epoll interest list
+2025-01-09T19:06:16.322061 [IO-EPOLL] [I] fd=9: Deregistered file descriptor successfully
+2025-01-09T19:06:16.322092 [IO-EPOLL] [D] fd=8: Deregistering file descriptor...
+2025-01-09T19:06:16.322098 [IO-EPOLL] [D] fd=8: File descriptor deregistered from epoll interest list
+2025-01-09T19:06:16.322104 [IO-EPOLL] [I] fd=8: Deregistered file descriptor successfully
+2025-01-09T19:06:16.322108 [SCTP-GW ] [I] F1-C: SCTP socket closed
+2025-01-09T19:06:16.322116 [IO-EPOLL] [D] fd=7: File descriptor deregistered from epoll interest list
+2025-01-09T19:06:16.322116 [IO-EPOLL] [D] io_broker thread stopped
+2025-01-09T19:06:16.322158 [IO-EPOLL] [I] Closed io_broker
