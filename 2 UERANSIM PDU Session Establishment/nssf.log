@@ -1,0 +1,17 @@
+Open5GS daemon v2.7.0
+
+01/25 15:23:57.784: [app] INFO: Configuration: '/etc/open5gs/nssf.yaml' (../lib/app/ogs-init.c:130)
+01/25 15:23:57.784: [app] INFO: File Logging: '/var/log/open5gs/nssf.log' (../lib/app/ogs-init.c:133)
+01/25 15:23:57.785: [sbi] INFO: NF Service [nnssf-nsselection] (../lib/sbi/context.c:1812)
+01/25 15:23:57.785: [sbi] INFO: nghttp2_server() [http://127.0.0.14]:7777 (../lib/sbi/nghttp2-server.c:414)
+01/25 15:23:57.786: [app] INFO: NSSF initialize...done (../src/nssf/app.c:31)
+01/25 15:23:57.788: [sbi] INFO: [ab0b4da4-bbbf-41ee-a9be-c7e27c6e0870] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:221)
+01/25 15:23:57.789: [sbi] INFO: [ab0bd33c-bbbf-41ee-b1a8-3da680b7add9] Subscription created until 2024-01-26T15:23:57.789104-05:00 [duration:86400,validity:86399.999286,patch:43199.999643] (../lib/sbi/nnrf-handler.c:708)
+01/25 15:24:27.806: [sbi] WARNING: [7] Failed to connect to 127.0.0.200 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:698)
+01/25 15:24:27.806: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:62)
+01/25 15:24:28.247: [app] INFO: SIGTERM received (../src/main.c:53)
+01/25 15:24:28.247: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+01/25 15:24:28.247: [sbi] INFO: [ab0b4da4-bbbf-41ee-a9be-c7e27c6e0870] NF de-registered (../lib/sbi/nf-sm.c:248)
+01/25 15:24:28.247: [sbi] WARNING: [7] Failed to connect to 127.0.0.200 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:698)
+01/25 15:24:28.247: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:62)
+01/25 15:24:28.248: [app] INFO: NSSF terminate...done (../src/nssf/app.c:39)

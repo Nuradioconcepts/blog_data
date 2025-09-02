@@ -1,0 +1,257 @@
+Open5GS daemon v2.7.0
+
+01/25 15:23:58.229: [app] INFO: Configuration: '/etc/open5gs/udr.yaml' (../lib/app/ogs-init.c:130)
+01/25 15:23:58.229: [app] INFO: File Logging: '/var/log/open5gs/udr.log' (../lib/app/ogs-init.c:133)
+01/25 15:23:58.229: [app] INFO: LOG-LEVEL: 'trace' (../lib/app/ogs-init.c:136)
+01/25 15:23:58.230: [sock] DEBUG: addr:127.0.0.20, port:7777 (../lib/core/ogs-sockaddr.c:143)
+01/25 15:23:58.230: [sock] DEBUG: addr:127.0.0.200, port:7777 (../lib/core/ogs-sockaddr.c:143)
+01/25 15:23:58.231: [dbi] INFO: MongoDB URI: 'mongodb://localhost/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+01/25 15:23:58.231: [sbi] DEBUG: ogs_sbi_nf_state_initial(): ENTRY (../lib/sbi/nf-sm.c:73)
+01/25 15:23:58.232: [sbi] DEBUG: ogs_sbi_nf_state_registered(): ENTRY (../lib/sbi/nf-sm.c:211)
+01/25 15:23:58.232: [sbi] INFO: NF Service [nudr-dr] (../lib/sbi/context.c:1812)
+01/25 15:23:58.232: [sbi] DEBUG: ogs_sbi_nf_state_initial(): ENTRY (../lib/sbi/nf-sm.c:73)
+01/25 15:23:58.232: [sbi] DEBUG: ogs_sbi_nf_state_will_register(): ENTRY (../lib/sbi/nf-sm.c:125)
+01/25 15:23:58.232: [sbi] TRACE: [ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d] ogs_nnrf_nfm_build_nf_profile() (../lib/sbi/nnrf-build.c:117)
+01/25 15:23:58.232: [sbi] TRACE: NF-Type[UDR] NF-Status[REGISTERED] IPv4[1] IPv6[0] (../lib/sbi/nnrf-build.c:119)
+01/25 15:23:58.232: [sbi] TRACE: IPv4 [family:2, addr:7f000014, port:24862] (../lib/sbi/nnrf-build.c:171)
+{"nfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","nfType":"UDR","nfStatus":"REGISTERED","ipv4Addresses":["127.0.0.20"],"allowedNfTypes":["SCP","PCF","UDM"],"priority":0,"capacity":100,"load":0,"nfServiceList":{"ab4f69b2-bbbf-41ee-95ac-d5c66c2eda9d":{"serviceInstanceId":"ab4f69b2-bbbf-41ee-95ac-d5c66c2eda9d","serviceName":"nudr-dr","versions":[{"apiVersionInUri":"v1","apiFullVersion":"1.0.0"}],"scheme":"http","nfServiceStatus":"REGISTERED","ipEndPoints":[{"ipv4Address":"127.0.0.20","port":7777}],"allowedNfTypes":["PCF","UDM"],"priority":0,"capacity":100,"load":0}},"nfProfileChangesSupportInd":true}01/25 15:23:58.232: [sbi] DEBUG: [PUT] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:728)
+01/25 15:23:58.232: [sbi] DEBUG: SENDING...[610] (../lib/sbi/client.c:497)
+01/25 15:23:58.232: [sbi] DEBUG: {"nfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","nfType":"UDR","nfStatus":"REGISTERED","ipv4Addresses":["127.0.0.20"],"allowedNfTypes":["SCP","PCF","UDM"],"priority":0,"capacity":100,"load":0,"nfServiceList":{"ab4f69b2-bbbf-41ee-95ac-d5c66c2eda9d":{"serviceInstanceId":"ab4f69b2-bbbf-41ee-95ac-d5c66c2eda9d","serviceName":"nudr-dr","versions":[{"apiVersionInUri":"v1","apiFullVersion":"1.0.0"}],"scheme":"http","nfServiceStatus":"REGISTERED","ipEndPoints":[{"ipv4Address":"127.0.0.20","port":7777}],"allowedNfTypes":["PCF","UDM"],"priority":0,"capacity":100,"load":0}},"nfProfileChangesSupportInd":true} (../lib/sbi/client.c:499)
+01/25 15:23:58.232: [sock] DEBUG: socket create(2:1:6) (../lib/core/ogs-socket.c:97)
+01/25 15:23:58.232: [sock] DEBUG: Turn on TCP_NODELAY (../lib/core/ogs-sockopt.c:139)
+01/25 15:23:58.232: [sock] DEBUG: Turn on SO_REUSEADDR (../lib/core/ogs-sockopt.c:120)
+01/25 15:23:58.232: [sock] DEBUG: socket bind 127.0.0.20:7777 (../lib/core/ogs-socket.c:122)
+01/25 15:23:58.232: [sock] DEBUG: tcp_server() [127.0.0.20]:7777 (../lib/core/ogs-tcp.c:60)
+01/25 15:23:58.232: [sbi] INFO: nghttp2_server() [http://127.0.0.20]:7777 (../lib/sbi/nghttp2-server.c:414)
+01/25 15:23:58.232: [thread] DEBUG: [0x5694b9807970] worker signal (../lib/core/ogs-thread.c:66)
+01/25 15:23:58.232: [udr] DEBUG: udr_state_initial(): INIT (../src/udr/udr-sm.c:25)
+01/25 15:23:58.232: [udr] DEBUG: udr_state_operational(): ENTRY (../src/udr/udr-sm.c:51)
+01/25 15:23:58.232: [thread] DEBUG: [0x5694b9807970] thread started (../lib/core/ogs-thread.c:104)
+01/25 15:23:58.232: [app] INFO: UDR initialize...done (../src/udr/app.c:31)
+01/25 15:23:58.235: [sbi] DEBUG: [201:PUT] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:675)
+01/25 15:23:58.235: [sbi] DEBUG: RECEIVED[179] (../lib/sbi/client.c:686)
+01/25 15:23:58.235: [sbi] DEBUG: {"nfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","nfType":"UDR","nfStatus":"REGISTERED","heartBeatTimer":10,"plmnList":[{"mcc":"001","mnc":"01"}],"nfProfileChangesInd":true} (../lib/sbi/client.c:689)
+01/25 15:23:58.235: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_CLIENT (../src/udr/udr-sm.c:51)
+{"nfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","nfType":"UDR","nfStatus":"REGISTERED","heartBeatTimer":10,"plmnList":[{"mcc":"001","mnc":"01"}],"nfProfileChangesInd":true}01/25 15:23:58.235: [sbi] DEBUG: ogs_sbi_nf_state_will_register(): OGS_EVENT_NAME_SBI_CLIENT (../lib/sbi/nf-sm.c:125)
+01/25 15:23:58.235: [sbi] DEBUG: ogs_sbi_nf_state_will_register(): EXIT (../lib/sbi/nf-sm.c:125)
+01/25 15:23:58.235: [sbi] DEBUG: ogs_sbi_nf_state_registered(): ENTRY (../lib/sbi/nf-sm.c:211)
+01/25 15:23:58.235: [sbi] INFO: [ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:221)
+{"nfStatusNotificationUri":"http://127.0.0.20:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","subscrCond":{"nfType":"SEPP"},"reqNfType":"UDR","requesterFeatures":"1"}01/25 15:23:58.235: [sbi] DEBUG: [POST] http://127.0.0.200:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:728)
+01/25 15:23:58.235: [sbi] DEBUG: SENDING...[211] (../lib/sbi/client.c:497)
+01/25 15:23:58.235: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.20:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","subscrCond":{"nfType":"SEPP"},"reqNfType":"UDR","requesterFeatures":"1"} (../lib/sbi/client.c:499)
+01/25 15:23:58.236: [sbi] DEBUG: [201:POST] http://127.0.0.200:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:675)
+01/25 15:23:58.236: [sbi] DEBUG: RECEIVED[320] (../lib/sbi/client.c:686)
+01/25 15:23:58.236: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.20:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","subscrCond":{"nfType":"SEPP"},"subscriptionId":"ab4fff08-bbbf-41ee-b1a8-3da680b7add9","validityTime":"2024-01-26T15:23:58.235853-05:00","reqNfType":"UDR","nrfSupportedFeatures":"1"} (../lib/sbi/client.c:689)
+01/25 15:23:58.236: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_CLIENT (../src/udr/udr-sm.c:51)
+{"nfStatusNotificationUri":"http://127.0.0.20:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d","subscrCond":{"nfType":"SEPP"},"subscriptionId":"ab4fff08-bbbf-41ee-b1a8-3da680b7add9","validityTime":"2024-01-26T15:23:58.235853-05:00","reqNfType":"UDR","nrfSupportedFeatures":"1"}01/25 15:23:58.236: [sbi] INFO: [ab4fff08-bbbf-41ee-b1a8-3da680b7add9] Subscription created until 2024-01-26T15:23:58.235853-05:00 [duration:86400,validity:86399.999361,patch:43199.999680] (../lib/sbi/nnrf-handler.c:708)
+01/25 15:24:08.243: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_TIMER (../src/udr/udr-sm.c:51)
+01/25 15:24:08.243: [sbi] DEBUG: ogs_sbi_nf_state_registered(): OGS_EVENT_NAME_SBI_TIMER (../lib/sbi/nf-sm.c:211)
+[{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}]01/25 15:24:08.243: [sbi] DEBUG: [PATCH] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:728)
+01/25 15:24:08.243: [sbi] DEBUG: SENDING...[100] (../lib/sbi/client.c:497)
+01/25 15:24:08.243: [sbi] DEBUG: [{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}] (../lib/sbi/client.c:499)
+01/25 15:24:08.245: [sbi] DEBUG: [204:PATCH] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:675)
+01/25 15:24:08.245: [sbi] DEBUG: RECEIVED[0] (../lib/sbi/client.c:686)
+01/25 15:24:08.245: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_CLIENT (../src/udr/udr-sm.c:51)
+01/25 15:24:08.245: [sbi] DEBUG: ogs_sbi_nf_state_registered(): OGS_EVENT_NAME_SBI_CLIENT (../lib/sbi/nf-sm.c:211)
+01/25 15:24:11.938: [sbi] DEBUG: FLAGS(0x0) [NO-ACK] (../lib/sbi/nghttp2-server.c:1186)
+01/25 15:24:11.938: [sbi] DEBUG: MAX_CONCURRENT_STREAMS = 100 (../lib/sbi/nghttp2-server.c:1197)
+01/25 15:24:11.938: [sbi] DEBUG: ENABLE_PUSH = false (../lib/sbi/nghttp2-server.c:1199)
+01/25 15:24:11.938: [sbi] DEBUG: STREAM added [1] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:11.938: [sbi] DEBUG: [GET] /nudr-dr/v1/subscription-data/imsi-001010000000001/authentication-data/authentication-subscription (../lib/sbi/nghttp2-server.c:1158)
+0000: 00000604 00000000 00000300 004000     .............@.
+01/25 15:24:11.938: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{"authenticationMethod":"5G_AKA","encPermanentKey":"00112233445566778899aabbccddeeff","sequenceNumber":{"sqn":"000000000061"},"authenticationManagementField":"8000","encOpcKey":"00112233445566778899aabbccddeeff"}01/25 15:24:11.939: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:11.939: [sbi] DEBUG: SENDING...: 212 (../lib/sbi/nghttp2-server.c:648)
+01/25 15:24:11.939: [sbi] DEBUG: {"authenticationMethod":"5G_AKA","encPermanentKey":"00112233445566778899aabbccddeeff","sequenceNumber":{"sqn":"000000000061"},"authenticationManagementField":"8000","encOpcKey":"00112233445566778899aabbccddeeff"} (../lib/sbi/nghttp2-server.c:649)
+01/25 15:24:11.940: [sbi] DEBUG: STREAM closed [1] (../lib/sbi/nghttp2-server.c:1268)
+01/25 15:24:11.940: [sbi] DEBUG: FLAGS(0x1) [ACK] (../lib/sbi/nghttp2-server.c:1186)
+0000: 00000004 01000000 00                  .........
+0000: 00003801 04000000 0188768b d5596a6f   ..8.......v..Yjo
+0010: 16e53b89 77570761 96df3dbf 4a09b532   ..;.wW.a..=.J..2
+0020: 8ea50401 34a08170 4d5c0854 c5a37f0f   ....4..pM\.T....
+0030: 0d821045 5f8b1d75 d0620d26 3d4c7441   ...E_..u.b.&=LtA
+0040: ea                                    .
+0000: 0000d400 01000000 017b2261 75746865   .........{"authe
+0010: 6e746963 6174696f 6e4d6574 686f6422   nticationMethod"
+0020: 3a223547 5f414b41 222c2265 6e635065   :"5G_AKA","encPe
+0030: 726d616e 656e744b 6579223a 22303031   rmanentKey":"001
+0040: 31323233 33343435 35363637 37383839   1223344556677889
+0050: 39616162 62636364 64656566 66222c22   9aabbccddeeff","
+0060: 73657175 656e6365 4e756d62 6572223a   sequenceNumber":
+0070: 7b227371 6e223a22 30303030 30303030   {"sqn":"00000000
+0080: 30303631 227d2c22 61757468 656e7469   0061"},"authenti
+0090: 63617469 6f6e4d61 6e616765 6d656e74   cationManagement
+00a0: 4669656c 64223a22 38303030 222c2265   Field":"8000","e
+00b0: 6e634f70 634b6579 223a2230 30313132   ncOpcKey":"00112
+00c0: 32333334 34353536 36373738 38393961   233445566778899a
+00d0: 61626263 63646465 65666622 7d         abbccddeeff"}
+01/25 15:24:11.943: [sbi] DEBUG: STREAM added [3] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:11.943: [sbi] DEBUG: [PUT] /nudr-dr/v1/subscription-data/imsi-001010000000001/authentication-data/authentication-status (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:11.943: [sbi] DEBUG: RECEIVED: 193 (../lib/sbi/nghttp2-server.c:1162)
+01/25 15:24:11.943: [sbi] DEBUG: {"nfInstanceId":"aaaec67e-bbbf-41ee-b0f9-059bdfe43eea","success":true,"timeStamp":"2024-01-25T15:24:11.943001-05:00","authType":"5G_AKA","servingNetworkName":"5G:mnc001.mcc001.3gppnetwork.org"} (../lib/sbi/nghttp2-server.c:1164)
+01/25 15:24:11.943: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{"nfInstanceId":"aaaec67e-bbbf-41ee-b0f9-059bdfe43eea","success":true,"timeStamp":"2024-01-25T15:24:11.943001-05:00","authType":"5G_AKA","servingNetworkName":"5G:mnc001.mcc001.3gppnetwork.org"}01/25 15:24:11.944: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:11.944: [sbi] DEBUG: STREAM closed [3] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00000301 05000000 0389c0bf            ............
+01/25 15:24:11.948: [sbi] DEBUG: STREAM added [5] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:11.948: [sbi] DEBUG: [PUT] /nudr-dr/v1/subscription-data/imsi-001010000000001/context-data/amf-3gpp-access (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:11.948: [sbi] DEBUG: RECEIVED: 258 (../lib/sbi/nghttp2-server.c:1162)
+01/25 15:24:11.948: [sbi] DEBUG: {"amfInstanceId":"aa12cb70-bbbf-41ee-80b6-2742bddf75fe","pei":"imeisv-4370816125816151","deregCallbackUri":"http://127.0.0.5:7777/namf-callback/v1/imsi-001010000000001/dereg-notify","guami":{"plmnId":{"mcc":"001","mnc":"01"},"amfId":"020040"},"ratType":"NR"} (../lib/sbi/nghttp2-server.c:1164)
+01/25 15:24:11.948: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{"amfInstanceId":"aa12cb70-bbbf-41ee-80b6-2742bddf75fe","pei":"imeisv-4370816125816151","deregCallbackUri":"http://127.0.0.5:7777/namf-callback/v1/imsi-001010000000001/dereg-notify","guami":{"plmnId":{"mcc":"001","mnc":"01"},"amfId":"020040"},"ratType":"NR"}01/25 15:24:11.948: [dbi] DEBUG: SUPI type: imsi, SUPI id: 001010000000001, imeisv: 4370816125816151 (../lib/dbi/subscription.c:178)
+01/25 15:24:11.949: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:11.949: [sbi] DEBUG: STREAM closed [5] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00000301 05000000 0589c0bf            ............
+01/25 15:24:11.951: [sbi] DEBUG: STREAM added [7] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:11.951: [sbi] DEBUG: [GET] /nudr-dr/v1/subscription-data/imsi-001010000000001/00101/provisioned-data/am-data (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:11.951: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{"subscribedUeAmbr":{"uplink":"1000000 Kbps","downlink":"1000000 Kbps"},"nssai":{"defaultSingleNssais":[{"sst":1}]}}01/25 15:24:11.951: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:11.951: [sbi] DEBUG: SENDING...: 116 (../lib/sbi/nghttp2-server.c:648)
+01/25 15:24:11.951: [sbi] DEBUG: {"subscribedUeAmbr":{"uplink":"1000000 Kbps","downlink":"1000000 Kbps"},"nssai":{"defaultSingleNssais":[{"sst":1}]}} (../lib/sbi/nghttp2-server.c:649)
+01/25 15:24:11.951: [sbi] DEBUG: STREAM closed [7] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00000901 04000000 0788c0bf 0f0d8208   ................
+0010: 5cbe                                  \.
+0000: 00007400 01000000 077b2273 75627363   ..t......{"subsc
+0010: 72696265 64556541 6d627222 3a7b2275   ribedUeAmbr":{"u
+0020: 706c696e 6b223a22 31303030 30303020   plink":"1000000 
+0030: 4b627073 222c2264 6f776e6c 696e6b22   Kbps","downlink"
+0040: 3a223130 30303030 30204b62 7073227d   :"1000000 Kbps"}
+0050: 2c226e73 73616922 3a7b2264 65666175   ,"nssai":{"defau
+0060: 6c745369 6e676c65 4e737361 6973223a   ltSingleNssais":
+0070: 5b7b2273 7374223a 317d5d7d 7d         [{"sst":1}]}}
+01/25 15:24:11.953: [sbi] DEBUG: STREAM added [9] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:11.953: [sbi] DEBUG: [GET] /nudr-dr/v1/subscription-data/imsi-001010000000001/00101/provisioned-data/smf-selection-subscription-data (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:11.953: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{"subscribedSnssaiInfos":{"1":{"dnnInfos":[{"dnn":"internet","defaultDnnIndicator":true}]}}}01/25 15:24:11.954: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:11.954: [sbi] DEBUG: SENDING...: 92 (../lib/sbi/nghttp2-server.c:648)
+01/25 15:24:11.954: [sbi] DEBUG: {"subscribedSnssaiInfos":{"1":{"dnnInfos":[{"dnn":"internet","defaultDnnIndicator":true}]}}} (../lib/sbi/nghttp2-server.c:649)
+01/25 15:24:11.954: [sbi] DEBUG: STREAM closed [9] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00000901 04000000 0988c0bf 0f0d0239   ...............9
+0010: 32be                                  2.
+0000: 00005c00 01000000 097b2273 75627363   ..\......{"subsc
+0010: 72696265 64536e73 73616949 6e666f73   ribedSnssaiInfos
+0020: 223a7b22 31223a7b 22646e6e 496e666f   ":{"1":{"dnnInfo
+0030: 73223a5b 7b22646e 6e223a22 696e7465   s":[{"dnn":"inte
+0040: 726e6574 222c2264 65666175 6c74446e   rnet","defaultDn
+0050: 6e496e64 69636174 6f72223a 74727565   nIndicator":true
+0060: 7d5d7d7d 7d                           }]}}}
+01/25 15:24:11.958: [sbi] DEBUG: STREAM added [11] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:11.958: [sbi] DEBUG: [GET] /nudr-dr/v1/policy-data/ues/imsi-001010000000001/am-data (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:11.958: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{}01/25 15:24:11.958: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:11.958: [sbi] DEBUG: SENDING...: 2 (../lib/sbi/nghttp2-server.c:648)
+01/25 15:24:11.958: [sbi] DEBUG: {} (../lib/sbi/nghttp2-server.c:649)
+01/25 15:24:11.958: [sbi] DEBUG: STREAM closed [11] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00000801 04000000 0b88c0bf 0f0d0132   ...............2
+0010: be                                    .
+0000: 00000200 01000000 0b7b7d              .........{}
+01/25 15:24:12.174: [sbi] DEBUG: STREAM added [13] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:12.174: [sbi] DEBUG: [GET] /nudr-dr/v1/subscription-data/imsi-001010000000001/00101/provisioned-data/sm-data (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:12.174: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+[{"singleNssai":{"sst":1},"dnnConfigurations":{"internet":{"pduSessionTypes":{"defaultSessionType":"IPV4","allowedSessionTypes":["IPV4"]},"sscModes":{"defaultSscMode":"SSC_MODE_1","allowedSscModes":["SSC_MODE_1","SSC_MODE_2","SSC_MODE_3"]},"5gQosProfile":{"5qi":9,"arp":{"priorityLevel":8,"preemptCap":"NOT_PREEMPT","preemptVuln":"PREEMPTABLE"},"priorityLevel":8},"sessionAmbr":{"uplink":"1000000 Kbps","downlink":"1000000 Kbps"}}}}]01/25 15:24:12.175: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:12.175: [sbi] DEBUG: SENDING...: 433 (../lib/sbi/nghttp2-server.c:648)
+01/25 15:24:12.175: [sbi] DEBUG: [{"singleNssai":{"sst":1},"dnnConfigurations":{"internet":{"pduSessionTypes":{"defaultSessionType":"IPV4","allowedSessionTypes":["IPV4"]},"sscModes":{"defaultSscMode":"SSC_MODE_1","allowedSscModes":["SSC_MODE_1","SSC_MODE_2","SSC_MODE_3"]},"5gQosProfile":{"5qi":9,"arp":{"priorityLevel":8,"preemptCap":"NOT_PREEMPT","preemptVuln":"PREEMPTABLE"},"priorityLevel":8},"sessionAmbr":{"uplink":"1000000 Kbps","downlink":"1000000 Kbps"}}}}] (../lib/sbi/nghttp2-server.c:649)
+01/25 15:24:12.175: [sbi] DEBUG: STREAM closed [13] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00002101 04000000 0d88c061 96df3dbf   ..!........a..=.
+0010: 4a09b532 8ea50401 34a08170 4d5c0894   J..2....4..pM\..
+0020: c5a37f0f 0d033433 33bf                ......433.
+0000: 0001b100 01000000 0d5b7b22 73696e67   .........[{"sing
+0010: 6c654e73 73616922 3a7b2273 7374223a   leNssai":{"sst":
+0020: 317d2c22 646e6e43 6f6e6669 67757261   1},"dnnConfigura
+0030: 74696f6e 73223a7b 22696e74 65726e65   tions":{"interne
+0040: 74223a7b 22706475 53657373 696f6e54   t":{"pduSessionT
+0050: 79706573 223a7b22 64656661 756c7453   ypes":{"defaultS
+0060: 65737369 6f6e5479 7065223a 22495056   essionType":"IPV
+0070: 34222c22 616c6c6f 77656453 65737369   4","allowedSessi
+0080: 6f6e5479 70657322 3a5b2249 50563422   onTypes":["IPV4"
+0090: 5d7d2c22 7373634d 6f646573 223a7b22   ]},"sscModes":{"
+00a0: 64656661 756c7453 73634d6f 6465223a   defaultSscMode":
+00b0: 22535343 5f4d4f44 455f3122 2c22616c   "SSC_MODE_1","al
+00c0: 6c6f7765 64537363 4d6f6465 73223a5b   lowedSscModes":[
+00d0: 22535343 5f4d4f44 455f3122 2c225353   "SSC_MODE_1","SS
+00e0: 435f4d4f 44455f32 222c2253 53435f4d   C_MODE_2","SSC_M
+00f0: 4f44455f 33225d7d 2c223567 516f7350   ODE_3"]},"5gQosP
+0100: 726f6669 6c65223a 7b223571 69223a39   rofile":{"5qi":9
+0110: 2c226172 70223a7b 22707269 6f726974   ,"arp":{"priorit
+0120: 794c6576 656c223a 382c2270 7265656d   yLevel":8,"preem
+0130: 70744361 70223a22 4e4f545f 50524545   ptCap":"NOT_PREE
+0140: 4d505422 2c227072 65656d70 7456756c   MPT","preemptVul
+0150: 6e223a22 50524545 4d505441 424c4522   n":"PREEMPTABLE"
+0160: 7d2c2270 72696f72 6974794c 6576656c   },"priorityLevel
+0170: 223a387d 2c227365 7373696f 6e416d62   ":8},"sessionAmb
+0180: 72223a7b 2275706c 696e6b22 3a223130   r":{"uplink":"10
+0190: 30303030 30204b62 7073222c 22646f77   00000 Kbps","dow
+01a0: 6e6c696e 6b223a22 31303030 30303020   nlink":"1000000 
+01b0: 4b627073 227d7d7d 7d5d                Kbps"}}}}]
+01/25 15:24:12.178: [sbi] DEBUG: STREAM added [15] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:12.178: [sbi] DEBUG: [GET] /nudr-dr/v1/policy-data/ues/imsi-001010000000001/sm-data (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:12.178: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{"smPolicySnssaiData":{"1":{"snssai":{"sst":1},"smPolicyDnnData":{"internet":{"dnn":"internet"}}}}}01/25 15:24:12.179: [sbi] DEBUG: STATUS [200] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:12.179: [sbi] DEBUG: SENDING...: 99 (../lib/sbi/nghttp2-server.c:648)
+01/25 15:24:12.179: [sbi] DEBUG: {"smPolicySnssaiData":{"1":{"snssai":{"sst":1},"smPolicyDnnData":{"internet":{"dnn":"internet"}}}}} (../lib/sbi/nghttp2-server.c:649)
+01/25 15:24:12.179: [sbi] DEBUG: STREAM closed [15] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00000901 04000000 0f88c1be 0f0d0239   ...............9
+0010: 39bf                                  9.
+0000: 00006300 01000000 0f7b2273 6d506f6c   ..c......{"smPol
+0010: 69637953 6e737361 69446174 61223a7b   icySnssaiData":{
+0020: 2231223a 7b22736e 73736169 223a7b22   "1":{"snssai":{"
+0030: 73737422 3a317d2c 22736d50 6f6c6963   sst":1},"smPolic
+0040: 79446e6e 44617461 223a7b22 696e7465   yDnnData":{"inte
+0050: 726e6574 223a7b22 646e6e22 3a22696e   rnet":{"dnn":"in
+0060: 7465726e 6574227d 7d7d7d7d            ternet"}}}}}
+01/25 15:24:12.191: [sbi] DEBUG: STREAM added [17] (../lib/sbi/nghttp2-server.c:1542)
+01/25 15:24:12.191: [sbi] DEBUG: [PUT] /nudr-dr/v1/subscription-data/imsi-001010000000001/context-data/smf-registrations/1 (../lib/sbi/nghttp2-server.c:1158)
+01/25 15:24:12.191: [sbi] DEBUG: RECEIVED: 148 (../lib/sbi/nghttp2-server.c:1162)
+01/25 15:24:12.191: [sbi] DEBUG: {"smfInstanceId":"a9f41766-bbbf-41ee-982c-4f7db4078ffa","pduSessionId":1,"singleNssai":{"sst":1},"dnn":"internet","plmnId":{"mcc":"001","mnc":"01"}} (../lib/sbi/nghttp2-server.c:1164)
+01/25 15:24:12.191: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/udr/udr-sm.c:51)
+{"smfInstanceId":"a9f41766-bbbf-41ee-982c-4f7db4078ffa","pduSessionId":1,"singleNssai":{"sst":1},"dnn":"internet","plmnId":{"mcc":"001","mnc":"01"}}01/25 15:24:12.191: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:640)
+01/25 15:24:12.191: [sbi] DEBUG: STREAM closed [17] (../lib/sbi/nghttp2-server.c:1268)
+0000: 00000301 05000000 1189c1be            ............
+01/25 15:24:18.250: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_TIMER (../src/udr/udr-sm.c:51)
+01/25 15:24:18.250: [sbi] DEBUG: ogs_sbi_nf_state_registered(): OGS_EVENT_NAME_SBI_TIMER (../lib/sbi/nf-sm.c:211)
+[{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}]01/25 15:24:18.250: [sbi] DEBUG: [PATCH] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:728)
+01/25 15:24:18.250: [sbi] DEBUG: SENDING...[100] (../lib/sbi/client.c:497)
+01/25 15:24:18.250: [sbi] DEBUG: [{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}] (../lib/sbi/client.c:499)
+01/25 15:24:18.252: [sbi] DEBUG: [204:PATCH] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:675)
+01/25 15:24:18.252: [sbi] DEBUG: RECEIVED[0] (../lib/sbi/client.c:686)
+01/25 15:24:18.252: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_CLIENT (../src/udr/udr-sm.c:51)
+01/25 15:24:18.253: [sbi] DEBUG: ogs_sbi_nf_state_registered(): OGS_EVENT_NAME_SBI_CLIENT (../lib/sbi/nf-sm.c:211)
+01/25 15:24:27.467: [sbi] DEBUG: connection closed [127.0.0.1]:60988 (../lib/sbi/nghttp2-server.c:993)
+01/25 15:24:28.251: [udr] DEBUG: udr_state_operational(): OGS_EVENT_NAME_SBI_TIMER (../src/udr/udr-sm.c:51)
+01/25 15:24:28.251: [sbi] DEBUG: ogs_sbi_nf_state_registered(): OGS_EVENT_NAME_SBI_TIMER (../lib/sbi/nf-sm.c:211)
+[{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}]01/25 15:24:28.251: [sbi] DEBUG: [PATCH] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:728)
+01/25 15:24:28.251: [sbi] DEBUG: SENDING...[100] (../lib/sbi/client.c:497)
+01/25 15:24:28.251: [sbi] DEBUG: [{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}] (../lib/sbi/client.c:499)
+01/25 15:24:28.251: [sbi] WARNING: [7] Failed to connect to 127.0.0.200 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:698)
+01/25 15:24:28.251: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:62)
+01/25 15:24:28.780: [app] INFO: SIGTERM received (../src/main.c:53)
+01/25 15:24:28.780: [app] INFO: Open5GS daemon terminating... (../src/main.c:226)
+01/25 15:24:28.780: [sbi] DEBUG: ogs_sbi_nf_state_registered(): EXIT (../lib/sbi/nf-sm.c:211)
+01/25 15:24:28.780: [sbi] DEBUG: ogs_sbi_nf_state_final(): EXIT (../lib/sbi/nf-sm.c:106)
+01/25 15:24:28.780: [sbi] DEBUG: [DELETE] http://127.0.0.200:7777/nnrf-nfm/v1/nf-instances/ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d (../lib/sbi/client.c:728)
+01/25 15:24:28.780: [sbi] DEBUG: ogs_sbi_nf_state_registered(): EXIT (../lib/sbi/nf-sm.c:211)
+01/25 15:24:28.780: [sbi] INFO: [ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d] NF de-registered (../lib/sbi/nf-sm.c:248)
+01/25 15:24:28.780: [sbi] DEBUG: ogs_sbi_nf_state_final(): EXIT (../lib/sbi/nf-sm.c:106)
+01/25 15:24:28.780: [event] DEBUG: interrupt all (../lib/core/ogs-queue.c:284)
+01/25 15:24:28.780: [thread] DEBUG: [0x5694b9807970] thread running(1) (../lib/core/ogs-thread.c:114)
+01/25 15:24:28.780: [sbi] WARNING: [7] Failed to connect to 127.0.0.200 port 7777 after 0 ms: Connection refused (../lib/sbi/client.c:698)
+01/25 15:24:28.780: [sbi] WARNING: ogs_sbi_client_handler() failed [-1] (../lib/sbi/path.c:62)
+01/25 15:24:28.780: [udr] DEBUG: udr_state_operational(): EXIT (../src/udr/udr-sm.c:51)
+01/25 15:24:28.780: [udr] DEBUG: udr_state_final(): INIT (../src/udr/udr-sm.c:34)
+01/25 15:24:28.780: [thread] DEBUG: [0x5694b9807970] worker done (../lib/core/ogs-thread.c:72)
+01/25 15:24:28.781: [thread] DEBUG: [0x5694b9807970] thread destroy (../lib/core/ogs-thread.c:126)
+01/25 15:24:28.781: [thread] DEBUG: [0x5694b9807970] thread join (../lib/core/ogs-thread.c:135)
+01/25 15:24:28.781: [thread] DEBUG: [0x5694b9807970] thread done (../lib/core/ogs-thread.c:141)
+01/25 15:24:28.782: [sbi] DEBUG: [UDR] NFInstance UnRef [ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d:1] (../lib/sbi/context.c:1196)
+01/25 15:24:28.782: [sbi] DEBUG: [UDR] NFInstance removed [ab4f31c2-bbbf-41ee-95ac-d5c66c2eda9d:1] (../lib/sbi/context.c:1206)
+01/25 15:24:28.782: [sbi] DEBUG: [NRF] NFInstance UnRef [(null):1] (../lib/sbi/context.c:1196)
+01/25 15:24:28.782: [sbi] DEBUG: [NRF] NFInstance removed [(null):1] (../lib/sbi/context.c:1206)
+01/25 15:24:28.782: [sbi] DEBUG: [SCP] NFInstance UnRef [(null):1] (../lib/sbi/context.c:1196)
+01/25 15:24:28.782: [sbi] DEBUG: [SCP] NFInstance removed [(null):1] (../lib/sbi/context.c:1206)
+01/25 15:24:28.782: [sbi] DEBUG: CLEINT UnRef [2] (../lib/sbi/client.c:178)
+01/25 15:24:28.782: [sbi] DEBUG: - addr [127.0.0.200:7777] (../lib/sbi/client.c:184)
+01/25 15:24:28.782: [sbi] DEBUG: [UNREF] 2 (../lib/sbi/client.c:192)
+01/25 15:24:28.782: [sbi] DEBUG: CLEINT UnRef [1] (../lib/sbi/client.c:178)
+01/25 15:24:28.782: [sbi] DEBUG: - addr [127.0.0.200:7777] (../lib/sbi/client.c:184)
+01/25 15:24:28.782: [sbi] DEBUG: CLEINT removed [1] (../lib/sbi/client.c:196)
+01/25 15:24:28.783: [app] INFO: UDR terminate...done (../src/udr/app.c:39)
